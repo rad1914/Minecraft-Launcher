@@ -45,6 +45,7 @@
             text-decoration: underline;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/minecraft-server-util/dist/index.min.js"></script>
 </head>
 <body>
     <h1><span style="color: #72A2FF;">Ember</span><span style="color: #FFFFFF;">Hills</span></h1>
@@ -82,5 +83,37 @@
     <div class="footer">
         <p>Hecho con ❤️ por RADWrld</p>
     </div>
+
+    <h1>Minecraft Server Status</h1>
+    <p id="serverStatus">Loading...</p>
+
+    <script>
+        // Function to update server status
+        function updateServerStatus() {
+            const serverIP = '20.ip.gl.ply.gg';
+            const serverPort = 41633;
+
+            MinecraftServer.getStatus(serverIP, { port: serverPort })
+                .then((response) => {
+                    const statusMessage = response.online ? 'Online' : 'Offline';
+                    const players = response.onlinePlayers;
+
+                    document.getElementById('serverStatus').innerHTML = `Server Status: ${statusMessage}`;
+                    if (response.online) {
+                        document.getElementById('serverStatus').innerHTML += `<br>Players Online: ${players}`;
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error fetching server status:', error);
+                    document.getElementById('serverStatus').innerHTML = 'Server Status: Offline';
+                });
+        }
+
+        // Update server status every 30 seconds (adjust as needed)
+        setInterval(updateServerStatus, 30000);
+
+        // Initial call to update server status on page load
+        updateServerStatus();
+    </script>
 </body>
 </html>
