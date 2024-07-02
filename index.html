@@ -2,172 +2,233 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>EmberHills y RogueRiot</title>
-    <style>
-        body {
-            background-color: #0B0B0B;
-            color: #E7E7E7;
-            font-family: Arial, sans-serif;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        h1 {
-            color: #72A2FF;
-        }
-        h2 {
-            color: #D3D3D3;
-        }
-        p {
-            color: #9B9B9B;
-            margin: 0.5em 0;
-        }
-        .important {
-            font-weight: bold;
-            color: #C0392B;
-        }
-        .server-info {
-            font-size: 1.2em;
-            font-weight: bold;
-            text-align: center;
-        }
-        .footer {
-            margin-top: 2em;
-            color: #FF9B9B9B;
-            text-align: center;
-        }
-        .warn {
-            background-color: #FFFFAA7;
-            color: #000;
-            border-radius: 8px;
-            padding: 10px;
-            margin: 10px auto;
-            display: inline-block;
-            text-align: center;
-        }
-        .link {
-            color: #A7C0FF;
-            text-decoration: underline;
-        }
-        .rules-section {
-            background-color: #111;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        .rules-section h3 {
-            background-color: #222;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .rules-section ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        .rules-section ul li {
-            margin: 5px 0;
-            position: relative;
-            padding-left: 20px;
-        }
-        .rules-section ul li:before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #E7E7E7;
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/minecraft-server-util/dist/index.min.js"></script>
-</head>
-<body>
-    <h1><span style="color: #72A2FF;">Ember</span><span style="color: #FFFFFF;">Hills</span></h1>
-    <h2>Con el poder de las cenizas del fénix</h2>
-
-    <div class="warn">
-        ⚠️ La IP del server es experimental, y podría cambiar, mantente al día desde Discord o WhatsApp en Caso de cambios
-    </div>
-
-    <p class="server-info">( 20.ip.gl.ply.gg | 41633 )</p>
-
-    <h3>Server Status</h3>
-    <p id="serverStatus">Loading...</p>
-
-    <div class="rules-section">
-        <h3 class="important">📜 Reglas de EmberHills:</h3>
-        <ul>
-            <li>No usar Toolbox, Custom Clients, motores de X-ray no autorizadas previamente. (Incluye clientes modificados: "Custom Clients").</li>
-            <li>No se permiten los trucos de duplicación, ni bug-exploits.</li>
-            <li>No se permite Anti-AFK, Auto-Clicking, herramientas flood y similares.</li>
-            <li>No se permiten Resource Packs para X-ray, visión nocturna, etc.</li>
-        </ul>
-        <h3 class="important">Comportamiento Inapropiado:</h3>
-        <ul>
-            <li>No hacer spam, ni promocionar otros servidores dentro de nuestras dependencias, incluyendo enlaces, o archivos dudosos sin permiso. (Incluye WhatsApp, sitio web, etc.)</li>
-            <li>No compartir contenido inapropiado o explícito, como gore, contenido desagradable, pornografía, etc.</li>
-            <li>No se toleran conductas agresivas u ofensivas; la falta de respeto hacia los miembros del server o staff; como el acoso, o el mal comportamiento (y se aconseja moderar el lenguaje).</li>
-            <li>No realizar PvP en áreas no permitidas, sin el consentimiento de la otra parte (que incluye matar y robar, revelar coords privadas sin permiso, etc).</li>
-            <li>No se permite la discriminación de ningún tipo a través de ningún medio, de manera explícita, indirecta o referencial.</li>
-        </ul>
-        <h3 class="important">⚖️ Cargos Varios:</h3>
-        <ul>
-            <li>Las sanciones con un período de suspensión activa aumentarán significativamente tu suspensión. Podrían llevarte a un baneo permanente y un Ban-IP en el server.</li>
-            <li>No usar skins completamente transparentes, ni inapropiadas (podrías ser reportado y recibir sanciones dependiendo de su gravedad).</li>
-            <li>Si acumulas 3 Strikes o varias advertencias en cualquiera de nuestras dependencias, podrías recibir ban.</li>
-            <li>No cumplir con las fechas establecidas para eventos, irrumpir en zonas públicas (como el lobby, mapas temáticos, etc.) puede resultar en sanciones o una posible suspensión.</li>
-        </ul>
-    </div>
-
-    <div class="rules-section">
-        <h3 class="important"><span style="color: red;">Rogue</span><span style="color: white;">Riot</span> 📜 Condiciones de Uso:</h3>
-        <ul>
-            <li>Los usuarios son responsables de sus acciones dentro del servidor. Actividades ilegales están prohibidas.</li>
-            <li>Los usuarios retienen la propiedad de su contenido, pero otorgan una licencia no exclusiva para su uso dentro del servidor.</li>
-            <li>Los usuarios deben cumplir con todas las leyes aplicables.</li>
-            <li>Prohibido subir o compartir contenido ilegal.</li>
-        </ul>
-        <h3>🗨️ Protección y uso de Datos:</h3>
-        <ul>
-            <li>La recopilación de datos personales cumple con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP). Consulta nuestra política de privacidad para más detalles.</li>
-            <li>No somos responsables de pérdidas de datos, daños a dispositivos u otros daños resultantes del uso del servidor.</li>
-            <li>Consulta y cumple con las políticas de Mojang y Microsoft sobre el uso de servidores de Minecraft.</li>
-            <li>Nos reservamos el derecho de modificar o suspender el servicio en cualquier momento sin previo aviso.</li>
-            <li>Nos reservamos el derecho de prohibir o suspender el servicio a cualquier persona sin previo aviso.</li>
-        </ul>
-    </div>
-
-    <p class="link">Únete a Discord: <a href="https://discord.com/invite/dGVWGY8Vms" class="link">https://discord.com/invite/dGVWGY8Vms</a></p>
-    <p class="link">Únete a WhatsApp: <a href="https://chat.whatsapp.com/ECI7l6U7flEKKRvxKS8FcB" class="link">https://chat.whatsapp.com/ECI7l6U7flEKKRvxKS8FcB</a></p>
-
-    <div class="footer">
-        <p>Hecho con ❤️ por RADWrld</p>
-    </div>
-
+    <title>ᏍIM | Gaming Room 🌙</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
-        // Function to update server status
-        function updateServerStatus() {
-            const serverIP = '20.ip.gl.ply.gg';
-            const serverPort = 41633;
+        const servers = [
+            { ip: '147.185.221.20', port: 41633, statusElementId: 'serverStatusEmberHills', buttonElementId: 'copyButtonEmberHills' },
+            { ip: '147.185.221.20', port: 52418, statusElementId: 'serverStatusRogueRiot', buttonElementId: 'copyButtonRogueRiot' },
+            { ip: '147.185.221.20', port: 41633, statusElementId: 'serverStatusSylvanCanyon', buttonElementId: 'copyButtonSylvanCanyon' },
+        ];
 
-            MinecraftServer.getStatus(serverIP, { port: serverPort })
-                .then((response) => {
-                    const statusMessage = response.online ? 'Online' : 'Offline';
-                    const players = response.onlinePlayers;
-
-                    document.getElementById('serverStatus').innerHTML = `Server Status: ${statusMessage}`;
-                    if (response.online) {
-                        document.getElementById('serverStatus').innerHTML += `<br>Players Online: ${players}`;
+        function updateServerStatus({ ip, port, statusElementId, buttonElementId }) {
+            fetch(`https://api.mcsrvstat.us/2/${ip}:${port}`)
+                .then(response => response.json())
+                .then(data => {
+                    const statusElement = document.getElementById(statusElementId);
+                    const statusButton = document.getElementById(buttonElementId);
+                    if (data.online) {
+                        statusElement.innerHTML = `<span class="minecraft-text">Server Status: Online</span><br>Players Online: ${data.players.online}/${data.players.max}`;
+                        statusButton.classList.remove('red');
+                        statusButton.classList.add('green');
+                    } else {
+                        statusElement.innerHTML = `<span class="minecraft-text">Server Status: Offline</span>`;
+                        statusButton.classList.remove('green');
+                        statusButton.classList.add('red');
                     }
                 })
-                .catch((error) => {
+                .catch(error => {
                     console.error('Error fetching server status:', error);
-                    document.getElementById('serverStatus').innerHTML = 'Server Status: Offline';
+                    const statusElement = document.getElementById(statusElementId);
+                    statusElement.innerHTML = `<span class="minecraft-text">Server Status: Offline</span>`;
+                    const statusButton = document.getElementById(buttonElementId);
+                    statusButton.classList.remove('green');
+                    statusButton.classList.add('red');
                 });
         }
 
-        // Update server status every 30 seconds (adjust as needed)
-        setInterval(updateServerStatus, 30000);
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert('Copied to clipboard: ' + copyText);
+            });
+        }
 
-        // Initial call to update server status on page load
-        updateServerStatus();
+        function toggleRules(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('hidden');
+        }
+
+        window.onload = () => {
+            servers.forEach(server => {
+                updateServerStatus(server);
+                setInterval(() => updateServerStatus(server), 30000);
+            });
+        };
     </script>
-</body>
-</html>
+</head>
+<body>
+    <div class="container">
+        <h1>ᏍIM | Gaming Room 🌙</h1>
+        <h2>Con el poder de las cenizas del fénix</h2>
+
+            <div class="warn" style="color: #FFC418; background-color: #191407";>
+            ⚠️ Las IPs de nuestros servers son experimentales, y podrían cambiar; mantente al día desde Discord o WhatsApp en caso de cambios.
+        </div>
+
+        <div class="rules-section">
+            <div class="server-title">
+        <h2 class="important" style="color: #16BBFF;">Ember</h2>
+        <h2 class="important" style="color: #FFFFFF;">Hills</h2>
+            </div>
+            <div class="warn" style="color: #C2C2C2";>
+                » Nuestro server principal, con modalidades de SMP, RPG, Dungeons, Mapas temáticos y más!
+            </div>
+            <div class="divider"></div>
+            <div class="server-info-container">
+                <div class="server-info" id="serverInfoEmberHills">
+                    <span>147.185.221.20:41633</span>
+                </div>
+                <button id="copyButtonEmberHills" class="minecraft-button" onclick="copyToClipboard('serverInfoEmberHills')">Copiar Info</button>
+                <p id="serverStatusEmberHills">Loading...</p>
+            </div>
+            <div class="divider"></div>
+            <h3 class="rules-section-heading" onclick="toggleRules('emberRules')">📜 Reglas del servidor</h3>
+            <div id="emberRules" class="rules-section hidden">
+                <!-- Rules content -->
+                <h3>🧩 Uso apropiado</h3>
+                <ul>
+                    <li>No se permiten los trucos de duplicación, ni bug-exploits.</li>
+                    <li>No se permite Anti-AFK, Auto-Clicking, herramientas flood y similares.</li>
+                    <li>No se permiten Resource Packs para X-ray, visión nocturna, etc.</li>
+                </ul>
+                <h3>🎭 Comportamiento esperado:</h3>
+                <ul>
+                    <li>No hacer spam, ni promocionar otros servidores dentro de nuestras dependencias: (enlaces, o archivos dudosos sin permiso)</li>
+                    <li>No compartir contenido inapropiado o explícito, como Gore, Contenido desagradable, Pornografía, etc.</li>
+                    <li>No se toleran conductas agresivas u ofensivas; la falta de respeto hacia los miembros del server o staff, tales como el acoso, o el mal comportamiento (y se aconseja moderar el lenguaje).</li>
+                    <li>No realizar PvP en áreas no permitidas, sin el consentimiento de la otra parte (que incluye matar y robar, revelar coords privadas sin permiso, etc).</li>
+                    <li>No se permite la discriminación de ningún tipo a través de ningún medio, de manera explícita, indirecta o referencial.</li>
+                </ul>
+                <h3>🔎 Cargos Varios:</h3>
+            <ul>
+                <li>Las sanciones con un período de suspensión activa aumentarán significativamente tu suspensión. Podrían llevarte a un baneo permanente y un Ban-IP en el server.</li>
+                <li>No usar skins completamente transparentes, ni inapropiadas (podrías ser reportado y recibir sanciones dependiendo de su gravedad).</li>
+                <li>Si acumulas 3 Strikes o varias advertencias en cualquiera de nuestras dependencias, podrías recibir ban.</li>
+                <li>No cumplir con las fechas establecidas para eventos, irrumpir en zonas públicas (como el lobby, mapas temáticos, etc.) puede resultar en sanciones o una posible suspensión.</li>
+            
+            </ul>
+                  </div>
+          
+            <div class="divider"></div>
+            <h3>🌐 Wiki del server</h3>
+</div>
+
+        <div class="rules-section">
+            <div class="server-title">
+              <h2 class="important" style="color: #FF164D;">Rogue</h2>
+              <h2 class="important" style="color: #FFFFFF;">Riot</h2>
+
+            </div>
+            <div class="warn" style="color: #C2C2C2";>
+                » La modalidad más hardcore que ofrecemos: Anárquico sin reglas, solo sujeto a nuestras condiciones de uso.
+            </div>
+            <div class="divider"></div>
+            <div class="server-info-container">
+                <div class="server-info" id="serverInfoRogueRiot">
+                    <span>147.185.221.20:52418</span>
+                </div>
+                <button id="copyButtonRogueRiot" class="minecraft-button" onclick="copyToClipboard('serverInfoRogueRiot')">Copiar Info</button>
+                <p id="serverStatusRogueRiot">Loading...</p>
+            </div>
+            <div class="divider"></div>
+    <h3 class="rules-section-heading" onclick="toggleRules('riotRules')">🛑 Condiciones de uso</h3>
+    <div id="riotRules" class="rules-section hidden">
+            <!-- Terms of use content -->
+               <ul>
+                <li>Los usuarios son responsables de sus acciones dentro del servidor. *Actividades ilegales están prohibidas.</li>
+                <li>Los usuarios retienen la propiedad de su contenido, pero otorgan una licencia no exclusiva para su uso dentro del servidor.</li>
+                <li>Los usuarios deben cumplir con todas las leyes aplicables.</li>
+                <li>Prohibido subir o compartir contenido ilegal.</li>
+            </ul>
+            <h3>🪪 Protección y uso de Datos:</h3>
+            <ul>
+                <li>No somos responsables de pérdidas de datos, daños a dispositivos u otros daños resultantes del uso del servidor.</li>
+                <li>Consulta y cumple con las políticas de Mojang y Microsoft sobre el uso de servidores de Minecraft.</li>
+                <li>Nos reservamos el derecho de modificar o suspender el servicio en cualquier momento.</li>
+            </ul>
+        </div>
+        <div class="divider"></div>
+    </div>
+
+
+<div class="rules-section">
+    <div class="server-title">
+        <h2 class="important" style="color: #79FF16;">Sylvan</h2>
+        <h2 class="important" style="color: #FFFFFF;">Canyon</h2>
+    </div>
+    <div class="warn" style="color: #C2C2C2;">
+        » Server enfocado en el Vanilla, SMP y una vida tranquila multiplayer
+    </div>
+    <div class="divider"></div>
+    <div class="server-info-container">
+        <div class="server-info" id="serverInfoSylvanCanyon">
+            <span>147.185.221.20:46960</span>
+        </div>
+        <button id="copyButtonSylvanCanyon" class="minecraft-button" onclick="copyToClipboard('serverInfoSylvanCanyon')">Copiar Info</button>
+        <p id="serverStatusSylvanCanyon">Loading...</p>
+    </div>
+    <div class="divider"></div>
+    <h3 class="rules-section-heading" onclick="toggleRules('canyonRules')">📜 Reglas del servidor</h3>
+    <div id="canyonRules" class="rules-section hidden">
+        <ul>
+            <li>No Griefing: No destruyas, robes o alteres las construcciones de otros jugadores.</li>
+            <li>No PvP No Consentido: El PvP debe ser consensuado por todos los jugadores involucrados.</li>
+            <li>Respeto a los Demás Jugadores: No se tolerarán comportamientos abusivos, insultos, amenazas o cualquier tipo de acoso.</li>
+            <li>No Hacks o Cheats: No utilices hacks, exploits o cualquier tipo de trampa que dé una ventaja injusta.</li>
+            <li>No Spam: No hagas spam en el chat del servidor.</li>
+            <li>No Publicidad: No promociones otros servidores o productos.</li>
+            <li>Construcciones Apropiadas: Mantén las construcciones dentro de los límites de decencia y respeto.</li>
+            <li>Seguir las Instrucciones del Staff: Obedece a los administradores y moderadores del servidor.</li>
+            <li>No Compartir Información Personal: No compartas información personal sensible ni solicites a otros jugadores.</li>
+            <li>Prohibido el Lenguaje Ofensivo: Evita el uso de lenguaje vulgar, discriminatorio o de connotación sexual.</li>
+            <li>No Explosivos sin Permiso: Evita el uso de explosivos cerca de construcciones ajenas.</li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+</div>
+
+      
+<div class="rules-section">
+    <div class="server-title">
+        <h2 class="important" style="color: #FFC51D;">Info</h2>
+        <h2 class="important" style="color: #FFFFFF;">Extra</h2>
+    </div>
+    <div class="warn" style="color: #C2C2C2;">
+        » Donaciones, links relevantes y descargas
+    </div>
+    
+    <h3>☕ Donaciones:</h3>
+    <ul>
+        <li>Desde Paypal: <a href="https://www.paypal.com/paypalme/radwrld" class="link">https://www.paypal.com/pay...</a></li>
+    </ul>
+    <div class="warn" style="color: #C2C2C2;">
+        # Nota: Si bien las donaciones son voluntarias, además de ayudar al server te damos <b>Kits de donación</b> aplicables a cualquier server; Checalos desde Kits de Donación
+    </div>
+    
+    <h3>🗨️ Redes sociales:</h3>
+    <ul>
+        <li>Únete a Whatsapp: <a href="https://chat.whatsapp.com/ECI7l6U7flEKKRvxKS8FcB" class="link">https://chat.whatsapp.com/...</a></li>
+        <li>Únete a Discord: <a href="https://discord.com/invite/dGVWGY8Vms" class="link">https://discord.com/invite/...</a></li>
+    </ul>
+    
+    <h3>⬇️ Descargas:</h3>
+    <h4>» Descarga Minecraft</h4>
+    <ul>
+        <li>Android: <a href="https://sdyueqian-my.sharepoint.cn/personal/admin_sdyueqian_partner_onmschina_cn/_layouts/15/onedrive.aspx?id=/personal/admin_sdyueqian_partner_onmschina_cn/Documents/正式版/1.21.1.03&ga=1" class="link">https://sdyueqian-my...</a></li>
+        <li>IOS: <a href="https://www.123pan.com/s/N6mrVv-aBn23.html" class="link">https://www.123pan.com/...</a></li>
+        <li>Windows: <a href="https://www.123pan.com/s/N6mrVv-xan23.html" class="link">https://www.123pan.com/...</a></li>
+    </ul>
+    
+    <div class="divider"></div>
+    <h4>» Descarga Terraria</h4>
+    <ul>
+        <li>Android: <a href="https://mobdisc.com/fdl/b73765ee-f423-48ae-90b1-f59f000a76e5/Terraria-v1-4-4-9-5-patched.apk" class="link">https://sdyueqian-my...</a></li>
+    </ul>
+</div>
+
+<div class="footer">
+    <p style="color: #595959;">Hecho con ❤️ por RADWrld | Web Version 1.0
+    </p>
+</div>

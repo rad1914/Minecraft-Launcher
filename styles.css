@@ -1,0 +1,114 @@
+body {
+    background-color: #000;
+    color: #E7E7E7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    color: #72A2FF;
+    font-size: 1.8em;
+    margin: 8px 0;
+}
+h2 {
+    color: #D3D3D3;
+    font-size: 1.3em;
+    margin: 8px 0;
+}
+.warn {
+    background-color: #111111;
+    color: #000;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px auto;
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+}
+.important {
+    font-weight: bold;
+    color: #C0392B;
+}
+.server-info {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.footer {
+    margin-top: 2em;
+    color: #FF9B9B9B;
+    text-align: center;
+}
+.link {
+    color: #A7C0FF;
+    text-decoration: underline;
+}
+.rules-section {
+    background-color: #111;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: left;
+}
+.rules-section h3 {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.rules-section ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+.rules-section ul li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+.rules-section ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #E7E7E7;
+}
+.minecraft-text {
+    font-family: 'Minecraftia', Arial, sans-serif;
+    font-size: 20px;
+    color: #00AA00;
+    display: inline-block;
+    margin-right: 10px;
+}
+.minecraft-button {
+    background-color: #00AA00;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.minecraft-button.red {
+    background-color: #AA0000;
+}
+.server-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.divider {
+    height: 2px;
+    background-color: #141414;
+    margin: 20px 0;
+}
+.hidden {
+    display: none;
+}
+.server-info-container {
+    text-align: center;
+}
