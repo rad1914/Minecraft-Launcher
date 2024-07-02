@@ -44,8 +44,63 @@
             color: #A7C0FF;
             text-decoration: underline;
         }
+        /* Estilos para el menú deslizable */
+        .slide-menu {
+            width: 250px;
+            max-width: 80%;
+            background-color: #333;
+            color: #FFF;
+            position: fixed;
+            top: 0;
+            right: -250px;
+            height: 100%;
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+        .slide-menu.open {
+            right: 0;
+        }
+        .slide-menu h3 {
+            color: #FFA500;
+            margin-top: 20px;
+        }
+        .slide-menu ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin: 20px;
+        }
+        .slide-menu ul li {
+            margin: 10px 0;
+        }
+        .slide-menu ul li p {
+            margin: 0;
+            color: #FFD700;
+        }
+        .slide-menu .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            background-color: #FF0000;
+            color: #FFF;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background-color: #FFA500;
+            color: #FFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/minecraft-server-util/dist/index.min.js"></script>
 </head>
 <body>
     <h1><span style="color: #72A2FF;">Ember</span><span style="color: #FFFFFF;">Hills</span></h1>
@@ -84,36 +139,35 @@
         <p>Hecho con ❤️ por RADWrld</p>
     </div>
 
-    <h1>Minecraft Server Status</h1>
-    <p id="serverStatus">Loading...</p>
+    <button class="menu-btn" onclick="toggleMenu()">Condiciones de Uso</button>
+
+    <div class="slide-menu" id="slideMenu">
+        <button class="close-btn" onclick="toggleMenu()">Cerrar</button>
+        <h3>ROGUERIOT Anarchy Minecraft Condiciones de Uso</h3>
+        <ul>
+            <li><strong>Responsabilidad del Usuario:</strong></li>
+            <li><p>- Los usuarios son responsables de sus acciones dentro del servidor. Actividades ilegales están prohibidas.</p></li>
+            <li><p>- Los usuarios retienen la propiedad de su contenido, pero otorgan una licencia no exclusiva para su uso dentro del servidor.</p></li>
+            <li><p>- Los usuarios deben cumplir con todas las leyes aplicables.</p></li>
+            <li><p>- Prohibido subir o compartir contenido ilegal.</p></li>
+            <li><strong>Protección y uso de Datos:</strong></li>
+            <li><p>- La recopilación de datos personales cumple con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP). Consulta nuestra política de privacidad para más detalles.</p></li>
+            <li><p>- No somos responsables de pérdidas de datos, daños a dispositivos u otros daños resultantes del uso del servidor.</p></li>
+            <li><p>- Consulta y cumple con las políticas de Mojang y Microsoft sobre el uso de servidores de Minecraft.</p></li>
+            <li><p>- Nos reservamos el derecho de modificar o suspender el servicio en cualquier momento sin previo aviso.</p></li>
+            <li><p>- Nos reservamos el derecho de prohibir o suspender el servicio a cualquier persona sin previo aviso.</p></li>
+        </ul>
+    </div>
 
     <script>
-        // Function to update server status
-        function updateServerStatus() {
-            const serverIP = '20.ip.gl.ply.gg';
-            const serverPort = 41633;
-
-            MinecraftServer.getStatus(serverIP, { port: serverPort })
-                .then((response) => {
-                    const statusMessage = response.online ? 'Online' : 'Offline';
-                    const players = response.onlinePlayers;
-
-                    document.getElementById('serverStatus').innerHTML = `Server Status: ${statusMessage}`;
-                    if (response.online) {
-                        document.getElementById('serverStatus').innerHTML += `<br>Players Online: ${players}`;
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error fetching server status:', error);
-                    document.getElementById('serverStatus').innerHTML = 'Server Status: Offline';
-                });
+        function toggleMenu() {
+            const menu = document.getElementById('slideMenu');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+            } else {
+                menu.classList.add('open');
+            }
         }
-
-        // Update server status every 30 seconds (adjust as needed)
-        setInterval(updateServerStatus, 30000);
-
-        // Initial call to update server status on page load
-        updateServerStatus();
     </script>
 </body>
 </html>
