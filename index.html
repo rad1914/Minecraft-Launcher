@@ -2,12 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>EmberHills</title>
+    <title>EmberHills y RogueRiot</title>
     <style>
         body {
             background-color: #0B0B0B;
             color: #E7E7E7;
             font-family: Arial, sans-serif;
+        }
+        h1, h2 {
             text-align: center;
         }
         h1 {
@@ -27,10 +29,12 @@
         .server-info {
             font-size: 1.2em;
             font-weight: bold;
+            text-align: center;
         }
         .footer {
             margin-top: 2em;
             color: #FF9B9B9B;
+            text-align: center;
         }
         .warn {
             background-color: #FFFFAA7;
@@ -39,23 +43,40 @@
             padding: 10px;
             margin: 10px auto;
             display: inline-block;
+            text-align: center;
         }
         .link {
             color: #A7C0FF;
             text-decoration: underline;
         }
-        .rules {
-            text-align: left;
-            margin-left: 20px;
+        .rules-section {
+            background-color: #111;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
         }
-        .rules h2 {
-            margin-top: 1em;
+        .rules-section h3 {
+            background-color: #222;
+            padding: 10px;
+            border-radius: 5px;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        .rules-section ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .rules-section ul li {
+            margin: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        .rules-section ul li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #E7E7E7;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/minecraft-server-util/dist/index.min.js"></script>
 </head>
 <body>
     <h1><span style="color: #72A2FF;">Ember</span><span style="color: #FFFFFF;">Hills</span></h1>
@@ -67,30 +88,44 @@
 
     <p class="server-info">( 20.ip.gl.ply.gg | 41633 )</p>
 
-    <div class="rules">
-        <h2 class="important">Reglas EmberHills:</h2>
+    <h3>Server Status</h3>
+    <p id="serverStatus">Loading...</p>
+
+    <div class="rules-section">
+        <h3 class="important">Reglas de EmberHills:</h3>
         <ul>
-            <li><span class="important">No usar Toolbox, Custom Clients, motores de X-ray no autorizadas previamente.</span> (Incluye clientes modificados: "Custom Clients").</li>
+            <li>No usar Toolbox, Custom Clients, motores de X-ray no autorizadas previamente. (Incluye clientes modificados: "Custom Clients").</li>
             <li>No se permiten los trucos de duplicación, ni bug-exploits.</li>
             <li>No se permite Anti-AFK, Auto-Clicking, herramientas flood y similares.</li>
             <li>No se permiten Resource Packs para X-ray, visión nocturna, etc.</li>
-            <li><span class="important">No hacer spam, ni promocionar otros servidores dentro de nuestras dependencias, incluyendo enlaces, o archivos dudosos sin permiso.</span> (Incluye WhatsApp, sitio web, etc.)</li>
+        </ul>
+        <h3 class="important">Comportamiento Inapropiado:</h3>
+        <ul>
+            <li>No hacer spam, ni promocionar otros servidores dentro de nuestras dependencias, incluyendo enlaces, o archivos dudosos sin permiso. (Incluye WhatsApp, sitio web, etc.)</li>
             <li>No compartir contenido inapropiado o explícito, como gore, contenido desagradable, pornografía, etc.</li>
             <li>No se toleran conductas agresivas u ofensivas; la falta de respeto hacia los miembros del server o staff; como el acoso, o el mal comportamiento (y se aconseja moderar el lenguaje).</li>
             <li>No realizar PvP en áreas no permitidas, sin el consentimiento de la otra parte (que incluye matar y robar, revelar coords privadas sin permiso, etc).</li>
             <li>No se permite la discriminación de ningún tipo a través de ningún medio, de manera explícita, indirecta o referencial.</li>
-            <li><span class="important">Las sanciones con un período de suspensión activa aumentarán significativamente tu suspensión.</span> Podrían llevarte a un baneo permanente y un Ban-IP en el server.</li>
+        </ul>
+        <h3 class="important">Cargos Varios:</h3>
+        <ul>
+            <li>Las sanciones con un período de suspensión activa aumentarán significativamente tu suspensión. Podrían llevarte a un baneo permanente y un Ban-IP en el server.</li>
             <li>No usar skins completamente transparentes, ni inapropiadas (podrías ser reportado y recibir sanciones dependiendo de su gravedad).</li>
-            <li>Si acumulas <span class="important">3 Strikes</span> o varias advertencias en cualquiera de nuestras dependencias, podrías recibir ban.</li>
+            <li>Si acumulas 3 Strikes o varias advertencias en cualquiera de nuestras dependencias, podrías recibir ban.</li>
             <li>No cumplir con las fechas establecidas para eventos, irrumpir en zonas públicas (como el lobby, mapas temáticos, etc.) puede resultar en sanciones o una posible suspensión.</li>
         </ul>
+    </div>
 
-        <h2 class="important"><span style="color: red;">Rogue</span><span style="color: white;">Riot</span> Anarchy Minecraft Condiciones de Uso:</h2>
+    <div class="rules-section">
+        <h3 class="important"><span style="color: red;">Rogue</span><span style="color: white;">Riot</span> Anarchy Minecraft Condiciones de Uso:</h3>
         <ul>
             <li>Los usuarios son responsables de sus acciones dentro del servidor. Actividades ilegales están prohibidas.</li>
             <li>Los usuarios retienen la propiedad de su contenido, pero otorgan una licencia no exclusiva para su uso dentro del servidor.</li>
             <li>Los usuarios deben cumplir con todas las leyes aplicables.</li>
             <li>Prohibido subir o compartir contenido ilegal.</li>
+        </ul>
+        <h3>Protección y uso de Datos:</h3>
+        <ul>
             <li>La recopilación de datos personales cumple con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP). Consulta nuestra política de privacidad para más detalles.</li>
             <li>No somos responsables de pérdidas de datos, daños a dispositivos u otros daños resultantes del uso del servidor.</li>
             <li>Consulta y cumple con las políticas de Mojang y Microsoft sobre el uso de servidores de Minecraft.</li>
@@ -105,5 +140,34 @@
     <div class="footer">
         <p>Hecho con ❤️ por RADWrld</p>
     </div>
+
+    <script>
+        // Function to update server status
+        function updateServerStatus() {
+            const serverIP = '20.ip.gl.ply.gg';
+            const serverPort = 41633;
+
+            MinecraftServer.getStatus(serverIP, { port: serverPort })
+                .then((response) => {
+                    const statusMessage = response.online ? 'Online' : 'Offline';
+                    const players = response.onlinePlayers;
+
+                    document.getElementById('serverStatus').innerHTML = `Server Status: ${statusMessage}`;
+                    if (response.online) {
+                        document.getElementById('serverStatus').innerHTML += `<br>Players Online: ${players}`;
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error fetching server status:', error);
+                    document.getElementById('serverStatus').innerHTML = 'Server Status: Offline';
+                });
+        }
+
+        // Update server status every 30 seconds (adjust as needed)
+        setInterval(updateServerStatus, 30000);
+
+        // Initial call to update server status on page load
+        updateServerStatus();
+    </script>
 </body>
 </html>
