@@ -5,25 +5,29 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
     text-align: center;
 }
+
 h1 {
-    color: #72A2FF;
+    color: #FFFFFF;
     font-size: 1.8em;
     margin: 8px 0;
 }
+
 h2 {
     color: #D3D3D3;
     font-size: 1.3em;
     margin: 8px 0;
 }
+
 .warn {
-    background-color: #111111;
-    color: #000;
+    background-color: #18140F;
+    color: #FFDE74;
     border-radius: 8px;
     padding: 10px;
     margin: 10px auto;
@@ -31,52 +35,65 @@ h2 {
     text-align: center;
     width: 90%;
 }
+
 .important {
     font-weight: bold;
-    color: #C0392B;
+    color: #FFFFFF;
 }
+
 .server-info {
     font-size: 1em;
     font-weight: bold;
     margin: 10px 0;
 }
+
 .footer {
     margin-top: 2em;
     color: #FF9B9B9B;
     text-align: center;
 }
+
 .link {
     color: #A7C0FF;
     text-decoration: underline;
 }
+
 .rules-section {
     background-color: #111;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px 0; 
     border-radius: 10px;
     text-align: left;
 }
+
 .rules-section h3 {
     background-color: #222;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    color: #D3D3D3; 
+    font-size: 1.0em; 
 }
+
 .rules-section ul {
     list-style-type: none;
     padding-left: 20px;
 }
+
 .rules-section ul li {
     margin: 5px 0;
     position: relative;
     padding-left: 20px;
+    color: #B9B9B9; 
 }
+
 .rules-section ul li:before {
     content: '•';
     position: absolute;
     left: 0;
     color: #E7E7E7;
 }
+
 .minecraft-text {
     font-family: 'Minecraftia', Arial, sans-serif;
     font-size: 20px;
@@ -84,6 +101,7 @@ h2 {
     display: inline-block;
     margin-right: 10px;
 }
+
 .minecraft-button {
     background-color: #00AA00;
     color: white;
@@ -92,23 +110,79 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .minecraft-button.red {
     background-color: #AA0000;
 }
+
 .server-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
 }
+
 .divider {
     height: 2px;
     background-color: #141414;
     margin: 20px 0;
 }
+
 .hidden {
     display: none;
 }
+
 .server-info-container {
     text-align: center;
+}
+
+.warn-info {
+    background-color: #111111;
+    color: #E7E7E7;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px auto;
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+}
+
+.warn-info p {
+    font-size: 0.8em; 
+}
+
+.disclaimer {
+    background-color: #000000;
+    color: #9B9B9B;
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+.warn {
+    color: #FF599F;
+    background-color: #28161E;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-paragraph {
+    color: #939393;
+  align-items: center;
+}
+
+.faq-question {
+    color: #939393;
+  align-items: center;
+}
+
+.rules-section h3 {
+    color: #C2C2C2;
+}
+
+code {
+  background-color: #333;
+  color: #DBDBDB;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace; 
 }

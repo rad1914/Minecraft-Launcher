@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ᏍIM | Gaming Room 🌙</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -63,18 +64,18 @@
         <h1>ᏍIM | Gaming Room 🌙</h1>
         <h2>Con el poder de las cenizas del fénix</h2>
 
-            <div class="warn" style="color: #FFC418; background-color: #191407";>
+        <div class="warn">
             ⚠️ Las IPs de nuestros servers son experimentales, y podrían cambiar; mantente al día desde Discord o WhatsApp en caso de cambios.
         </div>
 
         <div class="rules-section">
             <div class="server-title">
-        <h2 class="important" style="color: #16BBFF;">Ember</h2>
-        <h2 class="important" style="color: #FFFFFF;">Hills</h2>
+                <h2 class="important" style="color: #16BBFF;">Ember</h2>
+                <h2 class="important" style="color: #FFFFFF;">Hills</h2>
             </div>
-            <div class="warn" style="color: #C2C2C2";>
+            <p class="faq-paragraph">
                 » Nuestro server principal, con modalidades de SMP, RPG, Dungeons, Mapas temáticos y más!
-            </div>
+            </p>
             <div class="divider"></div>
             <div class="server-info-container">
                 <div class="server-info" id="serverInfoEmberHills">
@@ -86,14 +87,13 @@
             <div class="divider"></div>
             <h3 class="rules-section-heading" onclick="toggleRules('emberRules')">📜 Reglas del servidor</h3>
             <div id="emberRules" class="rules-section hidden">
-                <!-- Rules content -->
-                <h3>🧩 Uso apropiado</h3>
+                <h3 class="rules-section-heading">🧩 Uso apropiado</h3>
                 <ul>
                     <li>No se permiten los trucos de duplicación, ni bug-exploits.</li>
                     <li>No se permite Anti-AFK, Auto-Clicking, herramientas flood y similares.</li>
                     <li>No se permiten Resource Packs para X-ray, visión nocturna, etc.</li>
                 </ul>
-                <h3>🎭 Comportamiento esperado:</h3>
+                <h3 class="rules-section-heading">🎭 Comportamiento esperado:</h3>
                 <ul>
                     <li>No hacer spam, ni promocionar otros servidores dentro de nuestras dependencias: (enlaces, o archivos dudosos sin permiso)</li>
                     <li>No compartir contenido inapropiado o explícito, como Gore, Contenido desagradable, Pornografía, etc.</li>
@@ -101,29 +101,27 @@
                     <li>No realizar PvP en áreas no permitidas, sin el consentimiento de la otra parte (que incluye matar y robar, revelar coords privadas sin permiso, etc).</li>
                     <li>No se permite la discriminación de ningún tipo a través de ningún medio, de manera explícita, indirecta o referencial.</li>
                 </ul>
-                <h3>🔎 Cargos Varios:</h3>
-            <ul>
-                <li>Las sanciones con un período de suspensión activa aumentarán significativamente tu suspensión. Podrían llevarte a un baneo permanente y un Ban-IP en el server.</li>
-                <li>No usar skins completamente transparentes, ni inapropiadas (podrías ser reportado y recibir sanciones dependiendo de su gravedad).</li>
-                <li>Si acumulas 3 Strikes o varias advertencias en cualquiera de nuestras dependencias, podrías recibir ban.</li>
-                <li>No cumplir con las fechas establecidas para eventos, irrumpir en zonas públicas (como el lobby, mapas temáticos, etc.) puede resultar en sanciones o una posible suspensión.</li>
-            
-            </ul>
-                  </div>
-          
+                <h3 class="rules-section-heading">🔎 Cargos Varios:</h3>
+                <ul>
+                    <li>Las sanciones con un período de suspensión activa aumentarán significativamente tu suspensión. Podrían llevarte a un baneo permanente y un Ban-IP en el server.</li>
+                    <li>No usar skins completamente transparentes, ni inapropiadas (podrías ser reportado y recibir sanciones dependiendo de su gravedad).</li>
+                    <li>Si acumulas 3 Strikes o varias advertencias en cualquiera de nuestras dependencias, podrías recibir ban.</li>
+                    <li>No cumplir con las fechas establecidas para eventos, irrumpir en zonas públicas (como el lobby, mapas temáticos, etc.) puede resultar en sanciones o una posible suspensión.</li>
+                </ul>
+            </div>
+
             <div class="divider"></div>
-            <h3>🌐 Wiki del server</h3>
-</div>
+            <h3 class="rules-section-heading"><a href="wiki.html">🌐 Wiki del server</a></h3>
+        </div>
 
         <div class="rules-section">
             <div class="server-title">
-              <h2 class="important" style="color: #FF164D;">Rogue</h2>
-              <h2 class="important" style="color: #FFFFFF;">Riot</h2>
-
+                <h2 class="important" style="color: #FF164D;">Rogue</h2>
+                <h2 class="important" style="color: #FFFFFF;">Riot</h2>
             </div>
-            <div class="warn" style="color: #C2C2C2";>
+            <p class="faq-paragraph">
                 » La modalidad más hardcore que ofrecemos: Anárquico sin reglas, solo sujeto a nuestras condiciones de uso.
-            </div>
+            </p>
             <div class="divider"></div>
             <div class="server-info-container">
                 <div class="server-info" id="serverInfoRogueRiot">
@@ -133,102 +131,100 @@
                 <p id="serverStatusRogueRiot">Loading...</p>
             </div>
             <div class="divider"></div>
-    <h3 class="rules-section-heading" onclick="toggleRules('riotRules')">🛑 Condiciones de uso</h3>
-    <div id="riotRules" class="rules-section hidden">
-            <!-- Terms of use content -->
-               <ul>
-                <li>Los usuarios son responsables de sus acciones dentro del servidor. *Actividades ilegales están prohibidas.</li>
-                <li>Los usuarios retienen la propiedad de su contenido, pero otorgan una licencia no exclusiva para su uso dentro del servidor.</li>
-                <li>Los usuarios deben cumplir con todas las leyes aplicables.</li>
-                <li>Prohibido subir o compartir contenido ilegal.</li>
-            </ul>
-            <h3>🪪 Protección y uso de Datos:</h3>
+            <h3 class="rules-section-heading" onclick="toggleRules('riotRules')">🛑 Condiciones de uso</h3>
+            <div id="riotRules" class="rules-section hidden">
+                <h3 class="rules-section-heading">🪪 Protección y uso de Datos:</h3>
+                <ul>
+                    <li>No somos responsables de pérdidas de datos, daños a dispositivos u otros daños resultantes del uso del servidor.</li>
+                    <li>Consulta y cumple con las políticas de Mojang y Microsoft sobre el uso de servidores de Minecraft.</li>
+                    <li>Nos reservamos el derecho de modificar o suspender el servicio en cualquier momento.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rules-section">
+            <div class="server-title">
+                <h2 class="important" style="color: #79FF16;">Sylvan</h2>
+                <h2 class="important" style="color: #FFFFFF;">Canyon</h2>
+            </div>
+            <p class="faq-paragraph">
+                » Server enfocado en el Vanilla, SMP y una vida tranquila multiplayer.
+            </p>
+            <div class="divider"></div>
+            <div class="server-info-container">
+                <div class="server-info" id="serverInfoSylvanCanyon">
+                    <span>147.185.221.20:46960</span>
+                </div>
+                <button id="copyButtonSylvanCanyon" class="minecraft-button" onclick="copyToClipboard('serverInfoSylvanCanyon')">Copiar Info</button>
+                <p id="serverStatusSylvanCanyon">Loading...</p>
+            </div>
+            <div class="divider"></div>
+            <h3 class="rules-section-heading" onclick="toggleRules('canyonRules')">📜 Reglas del servidor</h3>
+            <div id="canyonRules" class="rules-section hidden">
+                <h3 class="rules-section-heading">🧩 Uso apropiado</h3>
+                <ul>
+                    <li>No Griefing: No destruyas, robes o alteres las construcciones de otros jugadores.</li>
+                    <li>No PvP No Consentido: El PvP debe ser consensuado por todos los jugadores involucrados.</li>
+                    <li>Respeto a los Demás Jugadores: No se tolerarán comportamientos abusivos, insultos, amenazas o cualquier tipo de acoso.</li>
+                    <li>No Hacks o Cheats: No utilices hacks, exploits o cualquier tipo de trampa que dé una ventaja injusta.</li>
+                    <li>No Spam: No hagas spam en el chat del servidor.</li>
+                    <li>No Publicidad: No promociones otros servidores o productos.</li>
+                    <li>Construcciones Apropiadas: Mantén las construcciones dentro de los límites de decencia y respeto.</li>
+                    <li>Seguir las Instrucciones del Staff: Obedece a los administradores y moderadores del servidor.</li>
+                    <li>No Compartir Información Personal: No compartas información personal sensible ni solicites a otros jugadores.</li>
+                    <li>Prohibido el Lenguaje Ofensivo: Evita el uso de lenguaje vulgar, discriminatorio o de connotación sexual.</li>
+                    <li>No Explosivos sin Permiso: Evita el uso de explosivos cerca de construcciones ajenas.</li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+        </div>
+
+        <div class="rules-section">
+            <div class="server-title">
+                <h2 class="important" style="color: #FFC51D;">Info </h2>
+                <h2 class="important" style="color: #FFFFFF;">Extra</h2>
+            </div>
+            <p class="faq-paragraph">
+                » Donaciones, links relevantes y descargas.
+            </p>
+            <div class="divider"></div>
+            <h3 class="rules-section-heading">☕ Donaciones:</h3>
             <ul>
-                <li>No somos responsables de pérdidas de datos, daños a dispositivos u otros daños resultantes del uso del servidor.</li>
-                <li>Consulta y cumple con las políticas de Mojang y Microsoft sobre el uso de servidores de Minecraft.</li>
-                <li>Nos reservamos el derecho de modificar o suspender el servicio en cualquier momento.</li>
+                <li>Desde Paypal: <a href="https://www.paypal.com/paypalme/radwrld" class="link">https://www.paypal.com...</a></li>
+            </ul>
+            <p class="faq-paragraph">
+                # Nota: Si bien las donaciones son voluntarias, además de ayudar al server te damos <b>Kits de donación</b> aplicables a cualquier server; Checalos desde:
+            </p>
+            <ul>
+                <li><b>🎁💎 Kits de Donación:</b> <a href="Click Aquí" class="link">Click aquí</a></li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3 class="rules-section-heading" id="redes-sociales">🗨️ Redes sociales:</h3>
+            <ul>
+                <li>Únete a Whatsapp: <a href="https://chat.whatsapp.com/ECI7l6U7flEKKRvxKS8FcB" class="link">https://chat.whatsapp.com...</a></li>
+                <li>Únete a Discord: <a href="https://discord.com/invite/dGVWGY8Vms" class="link">https://discord.com/in...</a></li>
+            </ul>
+
+            <div class="divider"></div>
+            <h3 class="rules-section-heading">⬇️ Descargas:</h3>
+            <h4 class="rules-section-heading">» Descarga Minecraft</h4>
+            <ul>
+                <li>Android: <a href="https://sdyueqian-my.sharepoint.cn/personal/admin_sdyueqian_partner_onmschina_cn/_layouts/15/onedrive.aspx?id=/personal/admin_sdyueqian_partner_onmschina_cn/Documents/正式版/1.21.1.03&ga=1" class="link">https://sdyueqian-my.sharepoint.cn/...</a></li>
+                <li>IOS: <a href="https://www.123pan.com/s/N6mrVv-aBn23.html" class="link">https://www.123pan.com/s/N6mrVv-aBn23.html</a></li>
+                <li>Windows: <a href="https://www.123pan.com/s/N6mrVv-xan23.html" class="link">https://www.123pan.com/s/N6mrVv-xan23.html</a></li>
+            </ul>
+            <div class="divider"></div>
+            <h4 class="rules-section-heading">» Descarga Terraria</h4>
+            <ul>
+                <li>Android: <a href="https://mobdisc.com/fdl/b73765ee-f423-48ae-90b1-f59f000a76e5/Terraria-v1-4-4-9-5-patched.apk" class="link">https://mobdisc.com/fdl/b73765ee-f423-48ae-90b1-f59f000a76e5/Terraria-v1-4-4-9-5-patched.apk</a></li>
             </ul>
         </div>
-        <div class="divider"></div>
-    </div>
 
-
-<div class="rules-section">
-    <div class="server-title">
-        <h2 class="important" style="color: #79FF16;">Sylvan</h2>
-        <h2 class="important" style="color: #FFFFFF;">Canyon</h2>
-    </div>
-    <div class="warn" style="color: #C2C2C2;">
-        » Server enfocado en el Vanilla, SMP y una vida tranquila multiplayer
-    </div>
-    <div class="divider"></div>
-    <div class="server-info-container">
-        <div class="server-info" id="serverInfoSylvanCanyon">
-            <span>147.185.221.20:46960</span>
+        <div class="footer">
+            <p style="color: #595959;">Hecho con ❤️ por RADWrld | Web Version 1.0.1</p>
         </div>
-        <button id="copyButtonSylvanCanyon" class="minecraft-button" onclick="copyToClipboard('serverInfoSylvanCanyon')">Copiar Info</button>
-        <p id="serverStatusSylvanCanyon">Loading...</p>
     </div>
-    <div class="divider"></div>
-    <h3 class="rules-section-heading" onclick="toggleRules('canyonRules')">📜 Reglas del servidor</h3>
-    <div id="canyonRules" class="rules-section hidden">
-        <ul>
-            <li>No Griefing: No destruyas, robes o alteres las construcciones de otros jugadores.</li>
-            <li>No PvP No Consentido: El PvP debe ser consensuado por todos los jugadores involucrados.</li>
-            <li>Respeto a los Demás Jugadores: No se tolerarán comportamientos abusivos, insultos, amenazas o cualquier tipo de acoso.</li>
-            <li>No Hacks o Cheats: No utilices hacks, exploits o cualquier tipo de trampa que dé una ventaja injusta.</li>
-            <li>No Spam: No hagas spam en el chat del servidor.</li>
-            <li>No Publicidad: No promociones otros servidores o productos.</li>
-            <li>Construcciones Apropiadas: Mantén las construcciones dentro de los límites de decencia y respeto.</li>
-            <li>Seguir las Instrucciones del Staff: Obedece a los administradores y moderadores del servidor.</li>
-            <li>No Compartir Información Personal: No compartas información personal sensible ni solicites a otros jugadores.</li>
-            <li>Prohibido el Lenguaje Ofensivo: Evita el uso de lenguaje vulgar, discriminatorio o de connotación sexual.</li>
-            <li>No Explosivos sin Permiso: Evita el uso de explosivos cerca de construcciones ajenas.</li>
-        </ul>
-    </div>
-    <div class="divider"></div>
-</div>
-
-      
-<div class="rules-section">
-    <div class="server-title">
-        <h2 class="important" style="color: #FFC51D;">Info</h2>
-        <h2 class="important" style="color: #FFFFFF;">Extra</h2>
-    </div>
-    <div class="warn" style="color: #C2C2C2;">
-        » Donaciones, links relevantes y descargas
-    </div>
-    
-    <h3>☕ Donaciones:</h3>
-    <ul>
-        <li>Desde Paypal: <a href="https://www.paypal.com/paypalme/radwrld" class="link">https://www.paypal.com/pay...</a></li>
-    </ul>
-    <div class="warn" style="color: #C2C2C2;">
-        # Nota: Si bien las donaciones son voluntarias, además de ayudar al server te damos <b>Kits de donación</b> aplicables a cualquier server; Checalos desde Kits de Donación
-    </div>
-    
-    <h3>🗨️ Redes sociales:</h3>
-    <ul>
-        <li>Únete a Whatsapp: <a href="https://chat.whatsapp.com/ECI7l6U7flEKKRvxKS8FcB" class="link">https://chat.whatsapp.com/...</a></li>
-        <li>Únete a Discord: <a href="https://discord.com/invite/dGVWGY8Vms" class="link">https://discord.com/invite/...</a></li>
-    </ul>
-    
-    <h3>⬇️ Descargas:</h3>
-    <h4>» Descarga Minecraft</h4>
-    <ul>
-        <li>Android: <a href="https://sdyueqian-my.sharepoint.cn/personal/admin_sdyueqian_partner_onmschina_cn/_layouts/15/onedrive.aspx?id=/personal/admin_sdyueqian_partner_onmschina_cn/Documents/正式版/1.21.1.03&ga=1" class="link">https://sdyueqian-my...</a></li>
-        <li>IOS: <a href="https://www.123pan.com/s/N6mrVv-aBn23.html" class="link">https://www.123pan.com/...</a></li>
-        <li>Windows: <a href="https://www.123pan.com/s/N6mrVv-xan23.html" class="link">https://www.123pan.com/...</a></li>
-    </ul>
-    
-    <div class="divider"></div>
-    <h4>» Descarga Terraria</h4>
-    <ul>
-        <li>Android: <a href="https://mobdisc.com/fdl/b73765ee-f423-48ae-90b1-f59f000a76e5/Terraria-v1-4-4-9-5-patched.apk" class="link">https://sdyueqian-my...</a></li>
-    </ul>
-</div>
-
-<div class="footer">
-    <p style="color: #595959;">Hecho con ❤️ por RADWrld | Web Version 1.0
-    </p>
-</div>
+</body>
+</html>
