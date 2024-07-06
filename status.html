@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado del Servidor Minecraft</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1 class="server-title">Estado de los servidores</h1>
+        <p class="faq-paragraph">Aquí puedes encontrar información actualizada sobre el estado de nuestros servidores Minecraft. ¡Mantente conectado!</p>
+        <div class="divider"></div>
+
+        <div class="server-info-container">
+            <h2 class="server-info">Status de EmberHills</h2>
+            <div class="server-status" id="status">
+                Cargando...
+            </div>
+            <p class="faq-paragraph">Nuestro servidor principal, donde la aventura te espera. ¡Explora, construye y conquista!</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="server-info-container">
+            <h2 class="server-info">Status de RogueRiot</h2>
+            <div class="server-status" id="status-rogue-riot">
+                Cargando...
+            </div>
+            <p class="faq-paragraph">Un servidor anárquico donde las reglas las pones tú. ¡Prepárate para la acción sin límites!</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="server-info-container">
+            <h2 class="server-info">Status de SylvanCanyon</h2>
+            <div class="server-status" id="status-sylvan-canyon">
+                Cargando...
+            </div>
+            <p class="faq-paragraph">Un servidor dedicado a la exploración y la construcción. ¡Crea tu propio paraíso en Sylvan Canyon!</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 class="faq-question">¿Qué es esto?</h3>
+        <p class="faq-paragraph">Esta página te muestra el estado actual del servidor Minecraft. Puedes ver si está online, cuántos jugadores hay conectados, la versión del servidor y más. </p>
+
+        <h3 class="faq-question">¿Cómo funciona?</h3>
+        <p class="faq-paragraph">Esta página utiliza una API para obtener información sobre el servidor. La API se actualiza constantemente, por lo que la información que ves aquí es siempre la más reciente.</p>
+
+        <h3 class="faq-question">¿Qué significa "EULA Blocked"?</h3>
+        <p class="faq-paragraph">Si el servidor tiene "EULA Blocked" en "Sí", significa que el servidor no está configurado correctamente para cumplir con los términos de uso de Mojang. Esto puede significar que el servidor no está autorizado para funcionar o que no está configurado para ser un servidor público.</p>
+
+        <h3 class="faq-question">¿Qué significa "Protocol Version"?</h3>
+        <p class="faq-paragraph">La versión del protocolo es la versión del servidor que se utiliza para comunicarse con los clientes. Si la versión del protocolo es demasiado baja, es posible que no puedas conectarte al servidor.</p>
+
+        <h3 class="faq-question">¿Cómo puedo reportar un problema?</h3>
+        <p class="faq-paragraph">Si encuentras algún problema con el servidor, puedes reportarlo en el chat del juego o contactando con un administrador.</p>
+
+        <h3 class="faq-question">¿Qué pasa si el servidor está offline?</h3>
+        <p class="faq-paragraph">Si el servidor está offline, puede ser que esté en mantenimiento o que haya un problema técnico. Puedes intentar conectarte más tarde o consultar el foro del servidor para obtener más información.</p>
+
+        <div class="footer">
+            <p><a href="wiki.html" class="link">Volver a la Wiki</a></p>
+        </div>
+    </div>
+    <script>
+        async function fetchServerStatus(serverAddress) {
+            const response = await fetch(`https://api.mcstatus.io/v2/status/java/${serverAddress}`);
+            const data = await response.json();
+            return data;
+        }
+
+        function displayStatus(data, statusDivId) {
+            const statusDiv = document.getElementById(statusDivId);
+            if (statusDivId === 'status-sylvan-canyon') {
+                statusDiv.innerHTML = `
+                    <div class="server-info">
+                        <div><strong>Estado:</strong> <span class="${data.online ? 'status-online' : 'status-offline'}">${data.online ? "En línea" : "Fuera de línea"}</span></div>
+                        <div><strong>Host:</strong> ${data.host}</div>
+                        <div><strong>Puerto:</strong> ${data.port}</div>
+                        <div><strong>Versión:</strong> 1.4.4.9</div> 
+                    </div>
+                `;
+            } else {
+                statusDiv.innerHTML = `
+                    <div class="server-info">
+                        <div><strong>Estado:</strong> <span class="${data.online ? 'status-online' : 'status-offline'}">${data.online ? "En línea" : "Fuera de línea"}</span></div>
+                        <div><strong>Host:</strong> ${data.host}</div>
+                        <div><strong>Puerto:</strong> ${data.port}</div>
+                        <div><strong>Mensaje del Día (MOTD):</strong> <code>${data.motd.clean}</code></div>
+                        <div><strong>Versión:</strong> <code>${data.version.name}</code></div>
+                        <div><strong>Jugadores:</strong> <code>${data.players.online} / ${data.players.max}</code></div>
+                        <div><strong>Edición:</strong> <code>Java</code></div>
+                        <div><strong>Modo de Juego:</strong> <code>Supervivencia</code></div>
+                        <div><strong>EULA Bloqueado:</strong> <code>${data.eula_blocked ? "Sí" : "No"}</code></div>
+                        <div><strong>Versión del Protocolo:</strong> <code>${data.version.protocol}</code></div>
+                    </div>
+                `;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const serverStatus = await fetchServerStatus('20.ip.gl.ply.gg:41633');
+            displayStatus(serverStatus, 'status');
+
+            const rogueRiotStatus = await fetchServerStatus('20.ip.gl.ply.gg:52418');
+            displayStatus(rogueRiotStatus, 'status-rogue-riot');
+
+            const sylvanCanyonStatus = await fetchServerStatus('20.ip.gl.ply.gg:41633');
+            displayStatus(sylvanCanyonStatus, 'status-sylvan-canyon');
+        });
+    </script>
+</body>
+</html>
