@@ -1,366 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donaciones - Tu Server</title>
+    <title>Apoya al Servidor</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <h1>Kits de donación</h1>
-            <div class="warn">
-                🫂♥️ Gracias por considerar apoyar nuestro servidor. Tu donación nos ayuda a mantener el servidor en línea y mejorar la experiencia de juego para todos.
-            </div>
-        </header>
+        <h1>Apoya al Servidor</h1>
+        <p class="faq-content">
+            Tu apoyo es fundamental para mantener el servidor en funcionamiento y ofrecer una experiencia de juego aún mejor. 
+            ¡Gracias por considerar contribuir! Cada kit de donación incluye el equivalente necesario para subir de rango de forma inmediata, además de algunos beneficios extras en algunos casos.
+        </p>
 
-        <!-- Kits de Donación para Minecraft SMP -->
+        <div class="divider"></div>
+
+        <p class="faq-content">
+            Puedes elegir entre nuestros kits de donación, cada uno con recompensas únicas y exclusivas. 
+        </p>
+
         <div class="rules-section">
-            <div class="server-title">
-                <h2 class="important">Lista de Kits</h2>
-            </div>
-            <p class="faq-paragraph">
-                » Estos kits están disponibles para nuestros donantes en el servidor SMP de Minecraft.
-            </p>
-
-            <!-- Kit Básico - Mercurio -->
-            <div class="server-info">
-                <h3 class="important">♒ Kit - Mercurio - Slate</h3>
-                <p><strong>Precio:</strong> >= $1 USD</p>
-                <h4>Beneficios Vanilla:</h4>
+            <div class="rank-section">
+                <h3>🚀 Mercurio - (Slate)</h3>
+                <p># Kit de inicio con beneficios esenciales y rango Slate garantizado.</p>
+                <p>Precio: >= <span style="color: #AFFFAD; font-weight: bold;">$1 USD</span></p>
+                <div class="divider" style="margin-bottom: 10px;"></div>
                 <ul>
-                    <li>Armadura de Cuero</li>
-                    <li>Espada de Piedra</li>
-                    <li>Comida Básica</li>
-                    <li>Bloques de Construcción</li>
-                    <li>Antorchas</li>
-                    <li><strong>Piedra de Protección (Rango Bajo)</strong></li>
-                    <li>16 lvls XP Minecraft (Slate Rank)</li>
-                </ul>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>1 Pull a la Ruleta</li>
-                    <li>125 Puntos de Playtime</li>
-                    <li>Rango Slate Asegurado (Homes: 5)</li>
-                    <li><a href="rangos.html" class="link">Todas las recompensas del rango Slate</a></li>
-                    <li>Símbolo 💎 en el chat por donador Tier I</li>
-                    <li>Dinero: Ꮝ1,250</li>
-                    <li><code>/kill</code>:  Este comando te permite hacer la automorición.  Ten cuidado al usarlo, ya que puedes perder tus items si hacen despawn.</li>
-                    <li><code>/pay</code>:  Este comando te permite transferir dinero a otro jugador.  Es una forma rápida y fácil de compartir dinero con tus amigos o de pagar por bienes y servicios en el servidor.</li>
-                    <li><strong>New Commands:</strong> <code>/kill</code>, <code>/pay</code></li>
-                    <li><strong>Earlier Kit Commands:</strong> </li>
-                    <li><strong>Elite Mobs Loot:</strong>  Access to custom loot from Elite Mobs like the Giant Tail Split Flame Armor Beast.</li>
-                </ul>
-            </div>
-            
-            <div class="divider"></div>
-
-            <!-- Kit Avanzado - Venus -->
-            <div class="server-info">
-                <h3 class="important">♐ Kit - Venus - Basalto</h3>
-                <p><strong>Precio:</strong> >= $5 USD</p>
-                <h4>Beneficios Vanilla:</h4>
-                <ul>
-                    <li>Armadura de Hierro</li>
-                    <li>Espada y Pico de Hierro Encantados</li>
-                    <li>Poción de Curación</li>
-                    <li>Bloques Especiales</li>
-                    <li>Cubo de Agua y Lava</li>
-                    <li><strong>Piedra de Protección (Rango Medio)</strong></li>
-                    <li>27 lvls XP Minecraft (Basalto Rank)</li>
-                </ul>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>3 Pulls a la Ruleta</li>
-                    <li>250 Puntos de Playtime</li>
-                    <li>Rango Basalto Asegurado (Homes: 7)</li>
-                    <li><a href="rangos.html" class="link">Todas las recompensas del rango Basalto</a></li>
-                    <li>Armadura Invictus Completa</li>
-                    <li>Símbolo 💎 en el chat por donador Tier I</li>
-                    <li>Dinero: Ꮝ2,500</li>
-                    <li><code>/shop</code>:  Este comando te permite acceder a la tienda básica del servidor.  No te preocupes, los precios son razonables y no te dejarán en la ruina.</li>
-                    <li><strong>New Commands:</strong> <code>/shop</code></li>
-                    <li><strong>Earlier Kit Commands:</strong> <code>/kill</code>, <code>/pay</code></li>
-                    <li><strong>Elite Mobs Loot:</strong>  Access to custom loot from Elite Mobs like the Acropolis Blade Dancer.</li>
-                </ul>
-            </div>
-            
-            <div class="divider"></div>
-
-            <!-- Kit VIP - Marte -->
-            <div class="server-info">
-                <h3 class="important">♌ Kit - Marte - Zafiro</h3>
-                <p><strong>Precio:</strong> >= $15 USD</p>
-                <h4>Beneficios Vanilla:</h4>
-                <ul>
-                    <li>Armadura y Herramientas de Diamante Encantadas</li>
-                    <li>Montura o Estandartes</li>
-                    <li>Items Exclusivos</li>
-                    <li>Área VIP</li>
-                    <li><strong>Piedra de Protección (Rango Muy Alto)</strong></li>
-                    <li>49 lvls XP Minecraft (Zafiro Rank)</li>
-                </ul>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>10 Pulls a la Ruleta y 6 Loots Garantizados</li>
-                    <li>1,000 Puntos de Playtime</li>
-                    <li>Rango Zafiro Asegurado (Homes: 11)</li>
-                    <li><a href="rangos.html" class="link">Todas las recompensas del rango Zafiro</a></li>
-                    <li>Símbolo 𐌍 en el chat por donador Tier II</li>
-                    <li>Dinero: Ꮝ5,000</li>
-                    <li><code>/repair</code>:  Este comando te permite reparar tus herramientas y armaduras.  Es una forma rápida y fácil de mantener tus herramientas en buen estado.</li>
-                    <li><strong>New Commands:</strong> <code>/repair</code></li>
-                    <li><strong>Earlier Kit Commands:</strong> <code>/kill</code>, <code>/pay</code>, <code>/shop</code>, <code>/enderchest</code>, <code>/back</code></li>
-                    <li><strong>Elite Mobs Loot:</strong>  Access to custom loot from Elite Mobs like the Giant Tail Split Flame Armor Beast and the Acropolis Blade Dancer.</li>
-                </ul>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- Kit Supremo - Júpiter -->
-            <div class="server-info">
-                <h3 class="important">♊ Kit - Júpiter - Diamante</h3>
-                <p><strong>Precio:</strong> >= $23 USD</p>
-                <h4>Beneficios Vanilla:</h4>
-                <ul>
-                    <li>Armadura y Herramientas de Netherite Encantadas</li>
-                    <li>Items Exclusivos de Alto Nivel</li>
-                    <li>Paquete Completo de Cosméticos</li>
-                    <li>Área VIP Exclusiva</li>
-                    <li><strong>Piedra de Protección (Rango Supremo)</strong></li>
-                    <li><strong><code>/back</code></strong> para mayor comodidad</li>
-                    <li>60 lvls XP Minecraft (Diamante Rank)</li>
-                </ul>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>12 Pulls a la Ruleta</li>
-                    <li>2,000 Puntos de Playtime</li>
-                    <li>Acceso a un Cosmetico Único</li>
-                    <li><a href="rangos.html" class="link">Y todos los beneficios del rango Diamante</a></li>
-                    <li>Símbolo ⚡ en el chat por donador Tier III</li>
-                    <li>Dinero: Ꮝ10,000</li>
-                    <li><code>/feed</code>:  Este comando te permite rellenar tu barra de hambre al instante.  Es una forma rápida y fácil de evitar morir de hambre.</li>
-                    <li><strong>New Commands:</strong> <code>/feed</code></li>
-                    <li><strong>Earlier Kit Commands:</strong> <code>/kill</code>, <code>/pay</code>, <code>/shop</code>, <code>/enderchest</code>, <code>/back</code>, <code>/repair</code></li>
-                    <li><strong>Elite Mobs Loot:</strong>  Access to custom loot from Elite Mobs like the Giant Tail Split Flame Armor Beast and the Acropolis Blade Dancer.</li>
-                </ul>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- Kit Supremo - Saturno (Nuevo) -->
-            <div class="server-info">
-                <h3 class="important">♓ Kit - Urano - Filosofal</h3>
-                <p><strong>Precio:</strong> >= $30 USD</p>
-                <h4>Beneficios Vanilla:</h4>
-                <ul>
-                    <li>Armadura y Herramientas de Netherite Mejoradas</li>
-                    <li>Items Exclusivos de Élite</li>
-                    <li>Cosméticos Especiales</li>
-                    <li>Área VIP con Beneficios Adicionales</li>
-                    <li><strong>Piedra de Protección (Rango Élite)</strong></li>
-                    <li><strong><code>/back</code></strong> para mayor comodidad</li>
-                    <li>Regla Mantener Inventario</li>
-                    <li>71 lvls XP Minecraft (Filosofal Rank)</li>
-                </ul>
-                <p><strong>Incluye:</strong></p>
-                <ul>
-                    <li>15 Pulls a la Ruleta</li>
-                    <li>4,000 Puntos de Playtime</li>
-                    <li>Acceso a un Cosmetico Ultra Exclusivo</li>
-                    <li><a href="rangos.html" class="link">Y todos los beneficios del rango Obsidiana</a></li>
-                    <li>Dinero: Ꮝ40,000</li>
-                    <li><code>/keepInventory</code>:  Este comando te permite mantener tus objetos en tu inventario incluso si mueres.  Es una forma de evitar perder tus objetos valiosos.</li>
-                    <li><strong>New Commands:</strong> <code>/keepInventory</code></li>
-                    <li><strong>Earlier Kit Commands:</strong> <code>/kill</code>, <code>/pay</code>, <code>/shop</code>, <code>/enderchest</code>, <code>/back</code>, <code>/repair</code>, <code>/feed</code></li>
-                    <li><strong>Elite Mobs Loot:</strong>  Access to custom loot from Elite Mobs like the Giant Tail Split Flame Armor Beast and the Acropolis Blade Dancer.</li>
+                    <p style="color: #B2B2B2;">
+                        <b>Vanilla Benefits:</b>
+                        <ul>
+                            <li>Armadura y arma básicas (Armadura de cuero, Espada de piedra)</li>
+                            <li>Recursos esenciales para la supervivencia (Comida, Bloques de construcción, Antorchas)</li>
+                            <li>Piedra de Protección de bajo nivel</li>
+                            <li>16 niveles de experiencia de Minecraft</li>
+                        </ul>
+                    </p>
+                    <div class="divider"></div>
+                    <p style="color: #B2B2B2;">
+                        <b>Beneficios Adicionales:</b>
+                        <li>1 tirada en la Ruleta de la Suerte</li>
+                        <li>125 puntos de tiempo de juego</li>
+                        <li>Rango Slate garantizado</li>
+                        <li>Todas las recompensas del rango Slate</li>
+                        <li>Símbolo de chat de donante de nivel I (💎)</li>
+                        <li>Ꮝ1,250 Chelines</li>
+                        <li>Nuevos comandos: <code>/kill</code>, <code>/pay</code></li>
+                        <li>Acceso al botín de Elite Mobs</li>
+                    </ul>
                 </ul>
             </div>
         </div>
-    </div>
 
-  
-<!-- Disclaimer -->
-<div class="rules-section disclaimer">
-    <p>
-        <strong>Disclaimer:</strong> Los precios inferiores a $1 USD no son recompensables y no aplican para los kits. Las recompensas y rangos exclusivos se otorgan según el monto redondo más cercano. Los rangos y recompensas son válidos mientras el servidor esté activo y en conformidad con nuestras políticas. Nos reservamos el derecho de modificar los kits y sus contenidos sin previo aviso.
-        <br><br>
-    </p>
-</div>
+        <div class="rules-section">
+            <div class="rank-section">
+                <h3>🌟 Venus - (Basalto)</h3>
+                <p># Kit intermedio con beneficios mejorados y rango Basalto garantizado.</p>
+                <p>Precio: >= <span style="color: #AFFFAD; font-weight: bold;">$5 USD</span></p>
+                <div class="divider" style="margin-bottom: 10px;"></div>
+                <ul>
+                    <p style="color: #B2B2B2;">
+                        <b>Vanilla Benefits:</b>
+                        <ul>
+                            <li>Armadura y herramientas mejoradas (Armadura de hierro, Espada y pico de hierro encantados)</li>
+                            <li>Artículos de supervivencia mejorados (Poción de curación, Bloques especiales, Cubos de agua y lava)</li>
+                            <li>Piedra de Protección de nivel medio</li>
+                            <li>27 niveles de experiencia de Minecraft</li>
+                        </ul>
+                    </p>
+                    <div class="divider"></div>
+                    <p style="color: #B2B2B2;">
+                        <b>Beneficios Adicionales:</b>
+                        <li>3 tiradas en la Ruleta de la Suerte</li>
+                        <li>250 puntos de tiempo de juego</li>
+                        <li>Rango Basalto garantizado</li>
+                        <li>Todas las recompensas del rango Basalto</li>
+                        <li>Armadura Invictus completa</li>
+                        <li>Símbolo de chat de donante de nivel I (💎)</li>
+                        <li>Ꮝ2,500 Chelines</li>
+                        <li>Nuevo comando: <code>/shop</code></li>
+                        <li>Acceso al botín de Elite Mobs (incluido el Acropolis Blade Dancer)</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
 
-<footer class="footer">
-    <p>Hecho con ❤️ por RADWrld</p>
-</footer>
+        <div class="rules-section">
+            <div class="rank-section">
+                <h3>🌍 Tierra - (Obsidiana)</h3>
+                <p># Kit de alto nivel con beneficios de élite y rango Obsidiana garantizado.</p>
+                <p>Precio: >= <span style="color: #AFFFAD; font-weight: bold;">$10 USD</span></p>
+                <div class="divider" style="margin-bottom: 10px;"></div>
+                <ul>
+                    <p style="color: #B2B2B2;">
+                        <b>Vanilla Benefits:</b>
+                        <ul>
+                            <li>Armadura y herramientas de nivel superior (Armadura de diamante encantada, Espada y pico de diamante encantados)</li>
+                            <li>Pociónes poderosas (Poción de fuerza, Poción de velocidad)</li>
+                            <li>Bloques de obsidiana</li>
+                            <li>Piedra de Protección de alto nivel</li>
+                            <li>35 niveles de experiencia de Minecraft</li>
+                        </ul>
+                    </p>
+                    <div class="divider"></div>
+                    <p style="color: #B2B2B2;">
+                        <b>Beneficios Adicionales:</b>
+                        <li>5 tiradas en la Ruleta de la Suerte</li>
+                        <li>500 puntos de tiempo de juego</li>
+                        <li>Rango Obsidiana garantizado</li>
+                        <li>Todas las recompensas del rango Obsidiana</li>
+                        <li>Símbolo de chat de donante de nivel II (𐌍)</li>
+                        <li>Ꮝ3,750 Chelines</li>
+                        <li>Nuevo comando: <code>/enderchest</code></li>
+                        <li>Acceso al botín de Elite Mobs (incluido el Giant Tail Split Flame Armor Beast y el Acropolis Blade Dancer)</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
 
-<script>
-    function toggleRules(id) {
-        var element = document.getElementById(id);
-        if (element.classList.contains('hidden')) {
-            element.classList.remove('hidden');
-        } else {
-            element.classList.add('hidden');
-        }
-    }
-</script>
-</body>
-</html>
-```
+        <div class="rules-section">
+            <div class="rank-section">
+                <h3>🔥 Marte - (Zafiro)</h3>
+                <p># Kit legendario con beneficios excepcionales y rango Zafiro garantizado.</p>
+                <p>Precio: >= <span style="color: #AFFFAD; font-weight: bold;">$15 USD</span></p>
+                <div class="divider" style="margin-bottom: 10px;"></div>
+                <ul>
+                    <p style="color: #B2B2B2;">
+                        <b>Vanilla Benefits:</b>
+                        <ul>
+                            <li>Armadura y herramientas de diamante completamente encantadas</li>
+                            <li>Artículos únicos</li>
+                            <li>Acceso a la zona VIP</li>
+                            <li>Piedra de Protección de nivel muy alto</li>
+                            <li>49 niveles de experiencia de Minecraft</li>
+                        </ul>
+                    </p>
+                    <div class="divider"></div>
+                    <p style="color: #B2B2B2;">
+                        <b>Beneficios Adicionales:</b>
+                        <li>10 tiradas en la Ruleta de la Suerte y 6 botines garantizados</li>
+                        <li>1,000 puntos de tiempo de juego</li>
+                        <li>Rango Zafiro garantizado</li>
+                        <li>Todas las recompensas del rango Zafiro</li>
+                        <li>Símbolo de chat de donante de nivel II (𐌍)</li>
+                        <li>Ꮝ5,000 Chelines</li>
+                        <li>Nuevo comando: <code>/repair</code></li>
+                        <li>Acceso al botín de Elite Mobs (incluido el Giant Tail Split Flame Armor Beast y el Acropolis Blade Dancer)</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
 
-I've added the explanation you provided, but I'm not sure where you want it to go in the HTML.  Could you please tell me where you'd like to place it?  For example, do you want it to be a new section, or should it be added to an existing section? 
+        <div class="rules-section">
+            <div class="rank-section">
+                <h3>👑 Júpiter - (Diamante)</h3>
+                <p># Kit mítico con beneficios máximos y rango Diamante garantizado.</p>
+                <p>Precio: >= <span style="color: #AFFFAD; font-weight: bold;">$23 USD</span></p>
+                <div class="divider" style="margin-bottom: 10px;"></div>
+                <ul>
+                    <p style="color: #B2B2B2;">
+                        <b>Vanilla Benefits:</b>
+                        <ul>
+                            <li>Armadura y herramientas de Netherite completamente encantadas</li>
+                            <li>Artículos únicos de alto nivel</li>
+                            <li>Paquete de cosméticos completo</li>
+                            <li>Zona VIP exclusiva</li>
+                            <li>Piedra de Protección Suprema</li>
+                            <li>Comando <code>/back</code></li>
+                            <li>60 niveles de experiencia de Minecraft</li>
+                        </ul>
+                    </p>
+                    <div class="divider"></div>
+                    <p style="color: #B2B2B2;">
+                        <b>Beneficios Adicionales:</b>
+                        <li>12 tiradas en la Ruleta de la Suerte</li>
+                        <li>2,000 puntos de tiempo de juego</li>
+                        <li>Acceso a un cosmético único</li>
+                        <li>Todas las recompensas del rango Diamante</li>
+                        <li>Símbolo de chat de donante de nivel III (⚡)</li>
+                        <li>Ꮝ10,000 Chelines</li>
+                        <li>Nuevo comando: <code>/feed</code></li>
+                        <li>Acceso al botín de Elite Mobs (incluido el Giant Tail Split Flame Armor Beast y el Acropolis Blade Dancer)</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
 
-Let me know and I'll help you with the updated HTML! 
+        <div class="rules-section">
+            <div class="rank-section">
+                <h3>✨ Saturno - (Filosofal)</h3>
+                <p># Kit legendario con todos los beneficios y rango Filosofal garantizado.</p>
+                <p>Precio: >= <span style="color: #AFFFAD; font-weight: bold;">$30 USD</span></p>
+                <div class="divider" style="margin-bottom: 10px;"></div>
+                <ul>
+                    <p style="color: #B2B2B2;">
+                        <b>Vanilla Benefits:</b>
+                        <ul>
+                            <li>Armadura y herramientas de Netherite mejoradas</li>
+                            <li>Artículos únicos de élite</li>
+                            <li>Cosméticos especiales</li>
+                            <li>Zona VIP con beneficios adicionales</li>
+                            <li>Piedra de Protección de élite</li>
+                            <li>Comando <code>/back</code></li>
+                            <li>Regla de Conservar Inventario</li>
+                            <li>71 niveles de experiencia de Minecraft</li>
+                        </ul>
+                    </p>
+                    <div class="divider"></div>
+                    <p style="color: #B2B2B2;">
+                        <b>Beneficios Adicionales:</b>
+                        <li>15 tiradas en la Ruleta de la Suerte</li>
+                        <li>4,000 puntos de tiempo de juego</li>
+                        <li>Acceso a un cosmético ultra exclusivo</li>
+                        <li>Todas las recompensas del rango Obsidiana</li>
+                        <li>Ꮝ40,000 Chelines</li>
+                        <li>Nuevo comando: <code>/keepInventory</code></li>
+                        <li>Acceso al botín de Elite Mobs (incluido el Giant Tail Split Flame Armor Beast y el Acropolis Blade Dancer)</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- FAQ -->
-<div class="rules-section" style="background-color: #000000;">
-    <div class="server-title">
-        <h2 class="important" style="color: #FF4C4C;">FAQ ′</h2>
-        <h2 class="important" style="color: #FFFFFF;">Preguntas Frecuentes</h2>
-    </div>
-    <p class="faq-paragraph">
-        » Resuelve tus dudas con nuestras preguntas frecuentes.
-    </p>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion1')">❓ ¿Cómo puedo donar al servidor?</h3>
-    <div id="faqQuestion1" class="rules-section hidden">
-        <p class="faq-paragraph">
-            Para donar al servidor, puedes usar el siguiente enlace de PayPal: <a href="https://www.paypal.com/paypalme/radwrld" class="link">Donar</a>. Las donaciones son voluntarias y nos ayudan a mantener y mejorar el servidor.
+        <p style="font-size: 0.9em; margin-bottom: 20px;">
+            ¡Gracias por tu apoyo! Puedes encontrar más información sobre las formas de donar en nuestro Discord o WhatsApp.
         </p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion4')">❓ ¿Qué sucede si no recibo mi kit después de donar?</h3>
-    <div id="faqQuestion4" class="rules-section hidden">
-        <p class="faq-paragraph">Si no recibes tu kit después de realizar la donación, por favor contacta a nuestro soporte a través del Discord o envía un correo a nuestro equipo de soporte para resolver cualquier problema.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion5')">❓ ¿Puedo transferir mi kit a otro jugador?</h3>
-    <div id="faqQuestion5" class="rules-section hidden">
-        <p class="faq-paragraph">No, los kits de donación están vinculados a la cuenta que realizó la donación y no se pueden transferir a otros jugadores. Sin embargo, si necesitas ayuda adicional, contáctanos y veremos qué podemos hacer.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion6')">❓ ¿Cómo se utilizan los puntos de Playtime?</h3>
-    <div id="faqQuestion6" class="rules-section hidden">
-        <p class="faq-paragraph">
-            Los puntos de Playtime son como una especie de moneda virtual en nuestro servidor. Cada vez que juegas, vas acumulando estos puntos. Cuantos más puntos tengas, más cosas geniales puedes conseguir.
-        </p>
-        <p class="faq-paragraph">
-            Aquí está cómo funciona:
-        </p>
-        <ul class="faq-paragraph">
-            <li><strong>Acumulación de Puntos:</strong> Cada minuto que pasas jugando en el servidor te suma puntos. Por ejemplo, si juegas durante 1 hora, acumulas una cierta cantidad de puntos.</li>
-            <li><strong>Canjeo de Recompensas:</strong> Una vez que tienes suficientes puntos, puedes intercambiarlos por recompensas especiales. Estas recompensas pueden ser artículos únicos, mejoras para tu personaje, o incluso acceso a áreas exclusivas del servidor.</li>
-            <li><strong>Beneficios Adicionales:</strong> Además de los artículos, los puntos de Playtime también pueden darte acceso a beneficios adicionales como rangos especiales o habilidades extra que no están disponibles para todos.</li>
-        </ul>
-        <p class="faq-paragraph">
-            Así que, básicamente, mientras más juegues y acumules puntos, más oportunidades tendrás de conseguir cosas increíbles que harán tu experiencia en el servidor aún más divertida y emocionante.
-        </p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion7')">❓ ¿Puedo obtener reembolsos por donaciones?</h3>
-    <div id="faqQuestion7" class="rules-section hidden">
-        <p class="faq-paragraph">Las donaciones son finales y no son reembolsables. Agradecemos tu comprensión y apoyo continuo. Si tienes algún problema o pregunta, contáctanos y haremos nuestro mejor esfuerzo para asistirte.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion9')">❓ ¿Esto es un mercado o una estrategia de ventas?</h3>
-    <div id="faqQuestion9" class="rules-section hidden">
-        <p class="faq-paragraph">No, no se trata de un mercado ni de una estrategia de ventas. Aquí, las donaciones son completamente voluntarias. Queremos agradecerte por tu apoyo, y lo hacemos ofreciéndote recompensas como un pequeño gesto de gratitud. No estás comprando nada en el sentido tradicional, ni garantizando beneficios específicos; Lo que queremos es mostrarte nuestro agradecimiento, but without pressure or commitments.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion8')">❓ ¿Qué hay de los Kits de Terraria/RogueRiot?</h3>
-    <div id="faqQuestion8" class="rules-section hidden">
-        <p class="faq-paragraph">Los kits de Terraria y RogueRiot son personalizados; debes contactarnos por WhatsApp o Discord con la captura de tu recibo. En base al monto de tu donación, te proporcionaremos beneficios personalizados.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion11')">❓ ¿Qué son los pulls a la ruleta y para qué sirven?</h3>
-    <div id="faqQuestion11" class="rules-section hidden">
-        <p class="faq-paragraph">
-            Los pulls a la ruleta son oportunidades para nuestra Lucky Wheel y obtener recompensas aleatorias exclusivas del VIP y de los Kits de donación GRATIS. Estas recompensas pueden variar desde artículos raros y valiosos hasta mejoras temporales y beneficios especiales.
-        </p>
-        <p class="faq-paragraph">
-            Aquí tienes cómo funciona:
-        </p>
-        <ul class="faq-paragraph">
-            <li><strong>Obtención de Pulls:</strong> Puedes obtener pulls a la ruleta de forma gratuita al subir de rango en el servidor. Cada vez que alcanzas un nuevo rango, se te otorgan pulls adicionales.</li>
-            <li><strong>Uso de Pulls:</strong> Una vez que tienes pulls, puedes usarlos para girar la ruleta y ver qué recompensas obtienes. Cada giro consume un pull y te da la oportunidad de ganar algo útil o divertido.</li>
-        </ul>
-        <p class="faq-paragraph">
-            Los pulls a la ruleta añaden un elemento de sorpresa y emoción al juego, permitiéndote ganar recompensas que pueden mejorar tu experiencia en el servidor. ¡No olvides usar tus pulls cuando subas de rango para maximizar tus beneficios!
-        </p>
-    </div>
-
-    <div class="divider"></div>
-
-    <h3 class="rules-section-heading faq-question" onclick="toggleRules('faqQuestion10')">❓ ¿Los Kits de donación afectan al Free-to-Play?</h3>
-    <div id="faqQuestion10" class="rules-section hidden">
-        <p class="faq-paragraph">
-            Entendemos que es importante mantener un equilibrio justo entre los jugadores que donan y los que no. Aquí te explicamos cómo logramos esto:
-        </p>
-        <ul class="faq-paragraph">
-            <li><strong>Balance del Juego:</strong> Aunque los donadores reciben algunas recompensas, nos aseguramos de que estas no den una ventaja desproporcionada sobre los jugadores que no donan. <b>Las recompensas están diseñadas para ser útiles pero no indispensables.</b></li>
-            <li><strong>Accesibilidad:</strong> Todo lo que se puede obtener a través de donaciones también puede ser logrado jugando y participando en el servidor. Los kits de donación ofrecen un atajo, pero no exclusividad.</li>
-            <li><strong>Apoyo Voluntario:</strong> Las donaciones son completamente opcionales y están ahí para quienes desean apoyar el servidor y su mantenimiento. Los jugadores Free-to-Play pueden disfrutar de todas las características del servidor sin ninguna obligación de donar.</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Disclaimer -->
-<div class="rules-section disclaimer">
-    <p>
-        <strong>Disclaimer:</strong> Los precios inferiores a $1 USD no son recompensables y no aplican para los kits. Las recompensas y rangos exclusivos se otorgan según el monto redondo más cercano. Los rangos y recompensas son válidos mientras el servidor esté activo y en conformidad con nuestras políticas. Nos reservamos el derecho de modificar los kits y sus contenidos sin previo aviso.
-        <br><br>
-    </p>
-</div>
-
-<footer class="footer">
-    <p>Hecho con ❤️ por RADWrld</p>
-</footer>
-
-<script>
-    function toggleRules(id) {
-        var element = document.getElementById(id);
-        if (element.classList.contains('hidden')) {
-            element.classList.remove('hidden');
-        } else {
-            element.classList.add('hidden');
-        }
-    }
-</script>
+      
+        <div class="divider"></div>
+        <div class="server-section">
+                <div class="grid-item" style="grid-column: span 2; text-align: center;"> 
+                    <a href="donate.html"><img src="https://i.imgur.com/uAwjgUt.jpeg" alt="Cosmetics" class="rounded-image"></a>
+                    <h3>🎁 Kits de Donación 🎁</h3>
+                    <p style="color: gray; text-align: center;">¡Apoya al servidor y obtén recompensas increíbles!  Sube de rango al instante y disfruta de beneficios exclusivos con nuestros <b>kits de donación.
+         </div> 
+        </div>
+                  
+            <div class="footer">
+            <p><a href="wiki.html" class="link">Volver a la Wiki</a></p>
+        </div>
 </body>
 </html>
