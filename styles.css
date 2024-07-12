@@ -1,0 +1,160 @@
+body {
+    background-color: #000;
+    color: #E7E7E7;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 1.7em;
+    }
+
+h2 {
+    color: #BBBBBB;
+    font-size: 1.2em;
+    margin: -10px 0;
+}
+
+/* Adjust width for warning */
+.warning { 
+    background-color: #1B1813; 
+    color: #FFE7AD;
+    border-radius: 8px;
+    padding: 10px; 
+    text-align: center;
+}
+
+.footer {
+    margin-top: 2em;
+    color: #FF9B9B9B;
+    text-align: center;
+}
+
+.link {
+    color: #A7C0FF;
+    text-decoration: none;
+}
+
+.rules-section {
+    background-color: #111;
+    padding: 20px; 
+    margin: 15px 0; 
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 4px;
+    }
+
+.rules-heading { 
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #C2C2C2;
+    font-size: 1em;
+}
+
+.rules-section ul {
+    list-style-type: none;
+    padding-left: 6px; /* Reduced padding */
+    grid-column: 1;
+    margin: 0;
+}
+
+.rules-section li {
+    position: relative;
+    padding-left: 14px;
+    color: #B9B9B9; 
+}
+
+.rules-section li:before {
+    content: '»';
+    position: absolute;
+    left: 0;
+    color: #B9B9B9;
+}
+
+/* Removed unused tags:
+    - important
+    - hidden
+    - minecraft-button:hover
+    - server-status-information
+    - minecraft-text
+    - faq-paragraph
+    - server-info-container
+*/
+
+.minecraft-button {
+    background-color: #00AA00;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.server-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column;
+}
+
+.divider {
+    height: 1px;
+    background-color: #141414;
+    margin: 12px 6px;
+}
+
+.faq-content { 
+    color: #939393;
+    text-align: justify; 
+    align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.rounded-image {
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  margin: 0 auto 4px auto;
+}
+
+.server-info-container .server-info div {
+  font-family: monospace;
+}
+
+p {
+    color: #969696;
+}
+
+h3 {
+    margin: 8px 0;
+}
+
+li {
+    color: #969696;
+}
+
+.rules-section li {
+    margin: 5px 0;
+}
+
+code {
+  background-color: #333;
+  color: #DBDBDB;
+  padding: 0.5px 4px;
+  border-radius: 3px;
+  font-family: monospace; 
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ᏍIM | Gaming Room 🌙</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <meta property="og:image" content="https://i.imgur.com/74UQKi5.jpeg">
+    <style>
+        body {
+            text-align: center; /* Center all text */
+        }
+
+        .rules-section {
+            text-align: center; /* Center text within the section */
+            gap: 15px;
+        }
+
+        .rules-heading a {
+            color: inherit; /* Inherit the color from the parent h3 */
+            text-decoration: none; /* Remove default link underline */
+        }
+
+        .players-online {
+            color: #969696; /* Color for "Players Online" */
+        }
+  
+        .warning-text {
+        color: #FFE7AD;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="server-title">
+            <h1>ᏍIM | Gaming Room 🌙</h1>
+            <h2>Con el poder de las cenizas del fénix</h2>
+        </div>
+
+        <p class="warning">⚠️ Las IPs de nuestros servers son experimentales, y podrían cambiar; mantente al día desde Discord o WhatsApp en caso de cambios.</p>
+
+        <div class="rules-section">
+            <div class="divider"; style="background-color: #111111;"></div>
+            <h2 style="color: #FFF">Ember</h2>
+            <h2 style="color: #16BBFF">Hills</h2>
+            <p class="faq-content">» Nuestro server principal de Minecraft, con modalidades de SMP, RPG, Dungeons, Mapas temáticos y más!</p>
+            <span id="serverIpEmberHills"><b>20.ip.gl.ply.gg:41633</b></span>
+            <button id="copyButtonEmberHills" class="minecraft-button" onclick="copyToClipboard('serverIpEmberHills')">Copiar Info</button>
+            <span id="serverStatusEmberHills">Cargando...</span>
+            <h3 class="rules-heading"><a href="wiki.html">🌐 Wiki y Rangos</a></h3>
+            <h3 class="rules-heading"><a href="reglas.html#ember-hills-rules">📜 Reglas del servidor</a></h3>
+        </div>
+
+        <div class="rules-section">
+            <div class="divider"; style="background-color: #111111;"></div>
+            <h2 style="color: #FFF">Rogue</h2>
+            <h2 style="color: #FF164D">Riot</h2>
+            <p class="faq-content">» La modalidad más hardcore que ofrecemos: Minecraft Anárquico sin reglas, solo sujeto a nuestras condiciones de uso.</p>
+            <span id="serverIpRogueRiot"><b>20.ip.gl.ply.gg:52418</b></span>
+            <button id="copyButtonRogueRiot" class="minecraft-button" onclick="copyToClipboard('serverIpRogueRiot')">Copiar Info</button>
+            <span id="serverStatusRogueRiot">Loading...</span>
+            <h3 class="rules-heading"><a href="reglas.html#rogue-riot-rules">🛑 Condiciones de uso</a></h3>
+            <h3 class="rules-heading"><a href="wiki.html">🌐 Wiki del server</a></h3>
+        </div>
+
+        <div class="rules-section">
+            <div class="divider"; style="background-color: #111111;"></div>
+            <h2 style="color: #FFF">Sylvan</h2>
+            <h2 style="color: #79FF16">Canyon</h2>
+            <p class="faq-content">» Server Terraria enfocado en el Vanilla, SMP y una vida tranquila multiplayer.</p>
+            <span id="serverIpSylvanCanyon"><b>20.ip.gl.ply.gg:46960</b></span>
+            <button id="copyButtonSylvanCanyon" class="minecraft-button" onclick="copyToClipboard('serverIpSylvanCanyon')">Copiar Info</button>
+            <span id="serverStatusSylvanCanyon">Loading...</span>
+            <h3 class="rules-heading"><a href="reglas.html#terraria-rules">📜 Reglas del servidor</a></h3>
+            <h3 class="rules-heading"><a href="wiki.html">🌐 Wiki del server</a></h3>
+        </div>
+
+        <div class="rules-section">
+            <div class="divider"; style="background-color: #111111;"></div>
+            <h2 style="color: #FFF">Info</h2>
+            <h2 style="color: #FFC51D">Extra</h2>
+            <p class="faq-content">Donaciones, links relevantes y descargas.</p>
+            <h3 class="rules-heading"><a href="donate.html">🎁 Kits de Donación 🎁</a></h3>
+            <p class="faq-content">Nota: Si bien las donaciones son voluntarias, además de ayudar al server te damos Kits de donación aplicables a cualquier server.</p>
+            <h3 class="rules-heading"><a href="https://chat.whatsapp.com/ECI7l6U7flEKKRvxKS8FcB">🗨️ Únete a WhatsApp</a></h3>
+            <h3 class="rules-heading"><a href="https://discord.com/invite/dGVWGY8Vms">🗨️ Únete a Discord</a></h3>
+            <p class="faq-content">Recomendamos unirte al menos a uno de los dos grupos para estar al tanto de todas las noticias, novedades y cambios que hacemos en los servers.</p>
+            <h3 class="rules-heading"><a href="downloads.html">⬇️ Descargas</a></h3>
+            <p class="faq-content">Descargas de Minecraft Android/IOS/Windows y Terraria APK en su última versión, compatibles con nuestros servers.</p>
+
+        </div>
+
+        <div class="footer">
+            <p>Hecho con ❤️ por RADWrld | Web Version 1.0.1</p>
+        </div>
+    </div>
+
+    <script>
+        const servers = [
+            { ip: '20.ip.gl.ply.gg', port: 41633, statusElementId: 'serverStatusEmberHills', buttonElementId: 'copyButtonEmberHills', serverIpId: 'serverIpEmberHills' },
+            { ip: '20.ip.gl.ply.gg', port: 52418, statusElementId: 'serverStatusRogueRiot', buttonElementId: 'copyButtonRogueRiot', serverIpId: 'serverIpRogueRiot' },
+            { ip: '20.ip.gl.ply.gg', port: 41633, statusElementId: 'serverStatusSylvanCanyon', buttonElementId: 'copyButtonSylvanCanyon', serverIpId: 'serverIpSylvanCanyon' },
+        ];
+
+        function updateServerStatus({ ip, port, statusElementId, buttonElementId, serverIpId }) {
+            fetch(`https://api.mcsrvstat.us/2/${ip}:${port}`)
+                .then(response => response.json())
+                .then(data => {
+                    const statusElement = document.getElementById(statusElementId);
+                    const statusButton = document.getElementById(buttonElementId);
+                    const serverIp = document.getElementById(serverIpId);
+                    if (data.online) {
+                        statusElement.innerHTML = `<span class="minecraft-text" style="color: #7BFF81;">Server Status: Online</span><br><span class="players-online">Players Online: ${data.players.online}/${data.players.max}</span>`;
+                        statusButton.classList.remove('red');
+                        statusButton.classList.add('green');
+                    } else {
+                        statusElement.innerHTML = `<span class="minecraft-text">Server Status: Offline</span>`;
+                        statusButton.classList.remove('green');
+                        statusButton.classList.add('red');
+                    }
+                    statusElement.insertAdjacentHTML('afterend', '<div class="divider"></div>');
+                })
+                .catch(error => {
+                    console.error('Error fetching server status:', error);
+                    const statusElement = document.getElementById(statusElementId);
+                    statusElement.innerHTML = `<span class="minecraft-text">Server Status: Offline</span>`;
+                    const statusButton = document.getElementById(buttonElementId);
+                    statusButton.classList.remove('green');
+                    statusButton.classList.add('red');
+                    statusElement.insertAdjacentHTML('afterend', '<div class="divider"></div>');
+                });
+        }
+
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert('Copied to clipboard: ' + copyText);
+            });
+        }
+
+        servers.forEach(updateServerStatus);
+    </script>
+</body>
+</html>
