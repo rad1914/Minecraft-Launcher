@@ -30,7 +30,7 @@
 <body>
     <div class="container">
         <div class="server-title">
-            <h1>Estado de los servidores</h1>
+            <h1>Estado de los servidores Minecraft</h1>
         </div>
            <p class="faq-content">
          Aquí puedes encontrar información actualizada sobre el estado de nuestros servidores Minecraft. ¡Mantente conectado!</p>
@@ -112,6 +112,17 @@
             serverList.appendChild(document.createElement('h3')).classList.add('rules-heading');
             serverList.lastChild.textContent = 'SylvanCanyon Status';
             serverList.appendChild(sylvanCanyonElement);
+
+            // Fetch WhatsApp bot status separately
+            const whatsappBotStatus = await fetchServerStatus('20.ip.gl.ply.gg:41633'); // Replace with your bot server address
+            const whatsappBotStatusDiv = document.createElement('div');
+            whatsappBotStatusDiv.classList.add('server-info');
+            whatsappBotStatusDiv.innerHTML = `
+                <div><strong>WhatsApp Bot Status:</strong> <code>${whatsappBotStatus.online ? "Online" : "Offline"}</code></div>
+            `;
+            serverList.appendChild(document.createElement('h3')).classList.add('rules-heading');
+            serverList.lastChild.textContent = 'Bot Server Status';
+            serverList.appendChild(whatsappBotStatusDiv);
         });
     </script>
 </body>
