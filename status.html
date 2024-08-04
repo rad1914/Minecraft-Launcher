@@ -74,18 +74,11 @@
             const serverStatusDiv = document.createElement('div');
             serverStatusDiv.classList.add('server-status', 'server-status-information');
             serverStatusDiv.innerHTML = `
-                <div class="server-info">
-                    <div><strong>Estado:</strong> <span class="${data.online ? 'status-online' : 'status-offline'}">${data.online ? "En línea" : "Fuera de línea"}</span></div>
-                    <div><strong>Host:</strong> ${data.host}</div>
-                    <div><strong>Puerto:</strong> ${data.port}</div>
-                    <div><strong>Mensaje del Día (MOTD):</strong> <code>${data.motd.clean}</code></div>
-                    <div><strong>Versión:</strong> <code>${data.version.name}</code></div>
-                    <div><strong>Jugadores:</strong> <code>${data.players.online} / ${data.players.max}</code></div>
-                    <div><strong>Edición:</strong> <code>Java</code></div>
-                    <div><strong>Modo de Juego:</strong> <code>Supervivencia</code></div>
-                    <div><strong>EULA Bloqueado:</strong> <code>${data.eula_blocked ? "Sí" : "No"}</code></div>
-                    <div><strong>Versión del Protocolo:</strong> <code>${data.version.protocol}</code></div>
-                </div>
+                <div><strong>Estado:</strong> <span class="${data.online ? 'status-online' : 'status-offline'}">${data.online ? "En línea" : "Fuera de línea"}</span></div>
+                <div><strong>Host:</strong> ${data.host}</div>
+                <div><strong>Puerto:</strong> ${data.port}</div>
+                <div><strong>Jugadores:</strong> <code>${data.players.online} / ${data.players.max}</code></div>
+                <div><strong>EULA Bloqueado:</strong> <code>${data.eula_blocked ? "Sí" : "No"}</code></div>
             `;
 
             serverInfoDiv.appendChild(serverStatusDiv);
@@ -94,6 +87,7 @@
 
         document.addEventListener('DOMContentLoaded', async () => {
             const serverList = document.getElementById('server-list');
+
 
             const emberHillsStatus = await fetchServerStatus('20.ip.gl.ply.gg:41633');
             const emberHillsElement = createServerStatusElement(emberHillsStatus);
@@ -107,8 +101,9 @@
             serverList.lastChild.textContent = 'RogueRiot Status';
             serverList.appendChild(rogueRiotElement);
 
-            const sylvanCanyonStatus = await fetchServerStatus('20.ip.gl.ply.gg:41633');
+            const sylvanCanyonStatus = await fetchServerStatus('20.ip.gl.ply.gg:41633'); // Use 41633 for the check
             const sylvanCanyonElement = createServerStatusElement(sylvanCanyonStatus);
+            sylvanCanyonElement.querySelector('div:nth-child(3)').textContent = 'Puerto: 46960'; // Display 46960
             serverList.appendChild(document.createElement('h3')).classList.add('rules-heading');
             serverList.lastChild.textContent = 'SylvanCanyon Status';
             serverList.appendChild(sylvanCanyonElement);
@@ -118,7 +113,7 @@
             const whatsappBotStatusDiv = document.createElement('div');
             whatsappBotStatusDiv.classList.add('server-info');
             whatsappBotStatusDiv.innerHTML = `
-                <div><strong>WhatsApp Bot Status:</strong> <code>${whatsappBotStatus.online ? "Online" : "Offline"}</code></div>
+                <strong>WhatsApp Bot Status:</strong> <code>${whatsappBotStatus.online ? "Online" : "Offline"}</code>
             `;
             serverList.appendChild(document.createElement('h3')).classList.add('rules-heading');
             serverList.lastChild.textContent = 'Bot Server Status';
