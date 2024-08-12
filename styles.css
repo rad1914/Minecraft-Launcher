@@ -12,7 +12,7 @@ body {
 h1, h2 {
     text-align: center;
     font-size: 1.7em;
-    }
+}
 
 h2 {
     color: #BBBBBB;
@@ -20,7 +20,6 @@ h2 {
     margin: -10px 0;
 }
 
-/* Adjust width for warning */
 .warning { 
     background-color: #1B1813; 
     color: #FFE7AD;
@@ -48,7 +47,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
     gap: 4px;
-    }
+}
 
 .rules-heading { 
     background-color: #222;
@@ -61,7 +60,7 @@ h2 {
 
 .rules-section ul {
     list-style-type: none;
-    padding-left: 6px; /* Reduced padding */
+    padding-left: 6px;
     grid-column: 1;
     margin: 0;
 }
@@ -78,16 +77,6 @@ h2 {
     left: 0;
     color: #B9B9B9;
 }
-
-/* Removed unused tags:
-    - important
-    - hidden
-    - minecraft-button:hover
-    - server-status-information
-    - minecraft-text
-    - faq-paragraph
-    - server-info-container
-*/
 
 .minecraft-button {
     background-color: #00AA00;
@@ -157,4 +146,30 @@ code {
   padding: 0.5px 4px;
   border-radius: 3px;
   font-family: monospace; 
+}
+
+/* Add responsive styles for large displays */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 40px; /* Increase padding for larger screens */
+    }
+
+    h1, h2 {
+        font-size: 2em; /* Increase font size for larger screens */
+    }
+
+    .rules-section {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider columns for larger screens */
+        padding: 30px; /* Increase padding */
+        margin: 20px 0;
+        gap: 10px;
+    }
+
+    .warning {
+        padding: 20px; /* Increase padding for warnings */
+    }
+
+    .footer {
+        margin-top: 4em; /* Increase margin for footer */
+    }
 }
