@@ -1,46 +1,40 @@
 const servers = [
-    { ip: '20.ip.gl.ply.gg', port: 41633, statusElementId: 'serverStatusEmberHills', buttonElementId: 'copyButtonEmberHills', serverIpId: 'serverIpEmberHills' },
-    { ip: '22.ip.gl.ply.gg', port: 11525, statusElementId: 'serverStatusRogueRiot', buttonElementId: 'copyButtonRogueRiot', serverIpId: 'serverIpRogueRiot' },
-    { ip: '20.ip.gl.ply.gg', port: 41633, statusElementId: 'serverStatusSylvanCanyon', buttonElementId: 'copyButtonSylvanCanyon', serverIpId: 'serverIpSylvanCanyon' },
+    { name: 'EmberHills', ip: '20.ip.gl.ply.gg', port: 41633, statusId: 'serverStatusEmberHills', serverIpId: 'serverIpEmberHills', statusButtonId: 'copyButtonEmberHills' },
+    { name: 'RogueRiot', ip: '22.ip.gl.ply.gg', port: 11525, statusId: 'serverStatusRogueRiot', serverIpId: 'serverIpRogueRiot', statusButtonId: 'copyButtonRogueRiot' },
+    { name: 'SylvanCanyon', ip: '20.ip.gl.ply.gg', port: 41633, statusId: 'serverStatusSylvanCanyon', serverIpId: 'serverIpSylvanCanyon', statusButtonId: 'copyButtonSylvanCanyon' },
+    { name: '𐌊𐌀𐌋𐌙𐌁𐌵ɽ𐌍 Bot', ip: '20.ip.gl.ply.gg', port: 41633, statusId: 'serverStatusWhatsAppBot', serverIpId: 'serverIpWhatsAppBot' }
 ];
 
-async function updateServerStatus({ ip, port, statusElementId, buttonElementId, serverIpId }) {
+async function updateServerStatus(server) {
+    const { ip, port, statusId, serverIpId, statusButtonId } = server;
+    const statusElement = document.getElementById(statusId);
+    const statusButton = document.getElementById(statusButtonId);
+
     try {
         const response = await fetch(`https://api.mcsrvstat.us/2/${ip}:${port}`);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
         const data = await response.json();
-        const statusElement = document.getElementById(statusElementId);
-        const statusButton = document.getElementById(buttonElementId);
 
         if (data.online) {
-            statusElement.innerHTML = `<span class="minecraft-text" style="color: #7BFF81;">Server Status: Online</span><br><p class="players-online minecraft-text">Players Online: ${data.players.online}/${data.players.max}</span>`;
-            statusButton.classList.remove('red');
-            statusButton.classList.add('green');
+            statusElement.innerHTML = `<span class="minecraft-text" style="color: #8FF57F;">Server Status: Online</span>`;
         } else {
-            statusElement.innerHTML = `<span class="minecraft-text" style="color: #FF8F7F;>Server Status: Offline</span>`;
-            statusButton.classList.remove('green');
-            statusButton.classList.add('red');
+            statusElement.innerHTML = `<span class="minecraft-text" style="color: #FF8F7F;">Server Status: Offline</span>`;
         }
+
+        if (statusButton) {
+            statusButton.addEventListener('click', function () {
+                const serverIpElement = document.getElementById(serverIpId);
+                const serverIp = serverIpElement ? serverIpElement.textContent : '';
+                navigator.clipboard.writeText(serverIp).then(() => {
+                    alert(`IP Copiada: ${serverIp}`);
+                }).catch(err => {
+                    console.error('Error copying IP:', err);
+                });
+            });
+        }
+
     } catch (error) {
         console.error('Error fetching server status:', error);
-        const statusElement = document.getElementById(statusElementId);
-        statusElement.innerHTML = `<span class="minecraft-text">Server Status: Offline</span>`;
-        const statusButton = document.getElementById(buttonElementId);
-        statusButton.classList.remove('green');
-        statusButton.classList.add('red');
     }
 }
 
-function copyToClipboard(elementId) {
-    const copyText = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(copyText).then(() => {
-        alert('Copied to clipboard: ' + copyText);
-    });
-}
-
 servers.forEach(updateServerStatus);
-
-document.getElementById('copyButtonEmberHills').addEventListener('click', () => copyToClipboard('serverIpEmberHills'));
-document.getElementById('copyButtonRogueRiot').addEventListener('click', () => copyToClipboard('serverIpRogueRiot'));
-document.getElementById('copyButtonSylvanCanyon').addEventListener('click', () => copyToClipboard('serverIpSylvanCanyon'));

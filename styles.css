@@ -191,7 +191,7 @@ li {
 .download-item {
     background-color: #1F1F1F;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -217,6 +217,7 @@ li {
     color: #BDBDBD;
     text-align: center; /* Center version text */
 }
+
 
 /* Download Button (.download-btn) and History Button (.history-btn) */
 .download-btn {
@@ -256,6 +257,62 @@ li {
     color: #fff; /* Keep button text white */
     text-decoration: none; /* Remove underlines from links */
 }
+
+/* Grouped Button Styles */
+.grouped-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd; /* Add bottom border to separate buttons */
+    background-color: #2E2E2E;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: none;
+}
+
+/* First button in the group */
+.grouped-btn:first-child {
+    border-radius: 8px 8px 0 0; /* Rounded corners on top */
+}
+
+/* Last button in the group */
+.grouped-btn:last-child {
+    border-radius: 0 0 8px 8px; /* Rounded corners on bottom */
+    border-bottom: none; /* Remove bottom border from last button */
+}
+
+/* Only one button in the group */
+.grouped-btn:only-child {
+    border-radius: 8px; /* Fully rounded */
+    border-bottom: none; /* Remove bottom border */
+}
+
+/* Button Hover State */
+.grouped-btn:hover {
+    background-color: #1a1a1a; /* Slightly darker shade for hover */
+}
+
+/* If using links inside buttons */
+.grouped-btn a {
+    color: #fff; /* Keep button text white */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* Adjustments for specific buttons */
+.download-btn {
+    background-color: #3D5AFE;
+}
+
+.download-btn:hover {
+    background-color: #2A43B7;
+}
+
+.history-btn {
+    background-color: #2E2E2E;
+}
+
 
 /* Status Link (.status-link) */
 .status-link {
