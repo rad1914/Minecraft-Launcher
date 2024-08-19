@@ -1,4 +1,4 @@
-/* Body Styles */
+/* Body Styles. */
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -95,7 +95,7 @@ p {
 .divider {
     height: 1px;
     background-color: #333;
-    margin-top: 10px 0;
+    margin: 10px 0;
     margin-bottom: 10px 0;
 }
 
@@ -136,7 +136,7 @@ p {
 /* Lists (Unordered and Ordered) */
 ul, ol {
     padding-left: 6px;
-    margin-bottom: -5px;
+    margin-bottom: 0px;
 }
 
 li {
