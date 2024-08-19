@@ -1,135 +1,123 @@
+/* Body Styles */
 body {
-    background-color: #000;
-    color: #E7E7E7;
     font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: justify;
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Minecraft';
+    src: url('./minecraft-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.minecraft-text {
+    font-family: 'Minecraft', sans-serif; /* Fallback to sans-serif if the font fails to load */
+}
+
+a {
+    color: inherit; /* Remove blue color from links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* General Container (.container) */
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-h1, h2 {
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 40px; /* Increase padding for larger screens */
+    }
+}
+
+/* Server Title (.server-title) */
+.server-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
+}
+
+.server-title h1, .server-title h2 {
+    text-align: center;
+    margin: 10px 0;
     font-size: 1.7em;
 }
 
-h2 {
+@media screen and (min-width: 768px) {
+    .server-title h1, .server-title h2 {
+        font-size: 2em; /* Increase font size for larger screens */
+    }
+}
+
+.server-title h2 {
     color: #BBBBBB;
     font-size: 1.2em;
     margin: -10px 0;
 }
 
-.warning { 
-    background-color: #1B1813; 
-    color: #FFE7AD;
-    border-radius: 8px;
-    padding: 10px; 
+/* Introduction Section (.introduction) */
+.introduction p {
+    color: #939393;
     text-align: center;
+    margin: 20px 0;
 }
 
-.footer {
-    margin-top: 2em;
-    color: #FF9B9B9B;
-    text-align: center;
+/* Divider (.divider) */
+.divider {
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
 }
 
-.link {
-    color: #A7C0FF;
-    text-decoration: none;
-}
-
+/* Rules Section (.rules-section) */
 .rules-section {
-    background-color: #111;
-    padding: 20px; 
-    margin: 15px 0; 
+    background-color: #1F1F1F;
+    padding: 30px;
+    margin: 15px 0;
     border-radius: 12px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    
+}
+
+@media screen and (min-width: 768px) {
+    .rules-section {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 30px; /* Increase padding */
+        margin: 20px 0;
+        gap: 10px;
+    }
 }
 
 .rules-heading { 
-    background-color: #222;
+    background-color: #323232;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     color: #C2C2C2;
     font-size: 1em;
+    margin-bottom: 15px; /* Add bottom padding */
 }
 
-.rules-section ul {
-    list-style-type: none;
-    padding-left: 6px;
-    grid-column: 1;
-    margin: 0;
-}
-
-.rules-section li {
-    position: relative;
-    padding-left: 14px;
-    color: #B9B9B9; 
-}
-
-.rules-section li:before {
-    content: '»';
-    position: absolute;
-    left: 0;
-    color: #B9B9B9;
-}
-
-.minecraft-button {
-    background-color: #00AA00;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.server-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    flex-direction: column;
-}
-
-.divider {
-    height: 1px;
-    background-color: #141414;
-    margin: 12px 6px;
-}
-
-.faq-content { 
-    color: #939393;
-    text-align: justify; 
-    align-items: center;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.rounded-image {
-  border-radius: 10px;
-  width: 100%;
-  display: block;
-  margin: 0 auto 4px auto;
-}
-
-.server-info-container .server-info div {
-  font-family: monospace;
-}
-
-p {
-    color: #969696;
-}
-
+/* Server Sections (.server-section) */
 h3 {
     margin: 8px 0;
+}
+
+/* Lists (Unordered and Ordered) */
+ul, ol {
+    padding-left: 6px;
+    margin: 0;
 }
 
 li {
@@ -140,36 +128,199 @@ li {
     margin: 5px 0;
 }
 
-code {
-  background-color: #333;
-  color: #DBDBDB;
-  padding: 0.5px 4px;
-  border-radius: 3px;
-  font-family: monospace; 
+/* Links (.link) */
+.link {
+    color: #A7C0FF;
+    text-decoration: none;
 }
 
-/* Add responsive styles for large displays */
+/* Specific Rank Sections (.rank-section) */
+.rank-section .price {
+    color: #AFFFAD;
+    font-weight: bold;
+}
+
+/* Warning Box (.warning) */
+.warning { 
+    background-color: #1B1813; 
+    color: #FFE7AD;
+    border-radius: 8px;
+    padding: 10px; 
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
-    .container {
-        padding: 40px; /* Increase padding for larger screens */
-    }
-
-    h1, h2 {
-        font-size: 2em; /* Increase font size for larger screens */
-    }
-
-    .rules-section {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider columns for larger screens */
-        padding: 30px; /* Increase padding */
-        margin: 20px 0;
-        gap: 10px;
-    }
-
     .warning {
         padding: 20px; /* Increase padding for warnings */
     }
+}
 
-    .footer {
-        margin-top: 4em; /* Increase margin for footer */
+/* Download Grid (.download-grid) */
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .download-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* Download Item (.download-item) */
+.download-item {
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    .download-item {
+        padding: 30px;
+    }
+}
+
+.download-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.download-item h3 {
+    margin: 10px 0;
+}
+
+.download-item p {
+    margin: 5px 0;
+    color: #BDBDBD;
+    text-align: center; /* Center version text */
+}
+
+/* Download Button (.download-btn) and History Button (.history-btn) */
+.download-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3D5AFE; /* Updated color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+}
+
+.download-btn:hover {
+    background-color: #2A43B7; /* Darker shade for hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.history-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2E2E2E;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.download-btn a, .history-btn a {
+    color: #fff; /* Keep button text white */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* Status Link (.status-link) */
+.status-link {
+    color: #2E2E2E; /* Same color as buttons */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.status-link:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Footer (.footer) */
+.footer {
+    margin-top: 40px;
+    color: #929292;
+    text-align: center;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer a {
+    color: #3D5AFE;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Inline Styles (e.g., span) */
+span {
+    font-weight: bold; /* Ensure boldness where needed */
+    /* Add specific inline font color or other styles as necessary */
+}
+
+/* Additional styling for elements like <code> or other inline elements */
+code {
+    background-color: #333;
+    color: #DBDBDB;
+    padding: 0.5px 4px;
+    border-radius: 3px;
+    font-family: monospace; 
+}
+
+/* Grid Container (.grid-container) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* Grid Item (.grid-item) */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grid-item-large {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-item-large img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: 64/35; /* Preserve the original aspect ratio */
+}
+
+/* Center grid item subtitles */
+.grid-item h3 {
+    text-align: center;
+}
+
+.faq-content {
+    color: #939393;
+    text-align: justify;
+    align-items: center;
 }
