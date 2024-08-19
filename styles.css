@@ -95,7 +95,8 @@ p {
 .divider {
     height: 1px;
     background-color: #333;
-    margin: 20px 0;
+    margin-top: 10px 0;
+    margin-bottom: 10px 0;
 }
 
 /* Rules Section (.rules-section) */
@@ -135,7 +136,7 @@ p {
 /* Lists (Unordered and Ordered) */
 ul, ol {
     padding-left: 6px;
-    margin: 0;
+    margin-bottom: -5px;
 }
 
 li {
@@ -258,7 +259,7 @@ li {
 
 /* Status Link (.status-link) */
 .status-link {
-    color: #2E2E2E; /* Same color as buttons */
+    color: #FF9788; /* Same color as buttons */
     text-decoration: none; /* Remove underlines from links */
 }
 
@@ -296,8 +297,8 @@ span {
 code {
     background-color: #333;
     color: #DBDBDB;
-    padding: 0.5px 4px;
-    border-radius: 3px;
+    padding: 0.3px 3px;
+    border-radius: 2px;
     font-family: monospace; 
 }
 
