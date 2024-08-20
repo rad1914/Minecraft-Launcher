@@ -1,4 +1,3 @@
-/* Body Styles. */
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -8,39 +7,38 @@ body {
     padding: 0;
 }
 
+body, .minecraft-text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 @font-face {
     font-family: 'Minecraft';
     src: url('./minecraft-font.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 .minecraft-text {
-    font-family: 'Minecraft', sans-serif; /* Fallback to sans-serif if the font fails to load */
+    font-family: 'Minecraft', sans-serif;
 }
 
 a {
-    color: inherit; /* Remove blue color from links */
-    text-decoration: none; /* Remove underline from links */
+    color: #A7C0FF;
+    text-decoration: none;
 }
 
-/* General Container (.container) */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-@media screen and (min-width: 768px) {
-    .container {
-        padding: 40px; /* Increase padding for larger screens */
-    }
-}
-
-/* General Heading Styles */
 h1 {
     font-size: 2em;
     margin: 10px 0;
+    text-align: center;
 }
 
 h2 {
@@ -50,10 +48,8 @@ h2 {
 
 h3 {
     font-size: 1.2em;
-    margin: 8px 0;
 }
 
-/* Server Title (.server-title) */
 .server-title {
     display: flex;
     justify-content: center;
@@ -64,14 +60,8 @@ h3 {
 
 .server-title h1, .server-title h2 {
     text-align: center;
-    margin: 10px 0;
+    margin: 8px 0;
     font-size: 1.7em;
-}
-
-@media screen and (min-width: 768px) {
-    .server-title h1, .server-title h2 {
-        font-size: 2em; /* Increase font size for larger screens */
-    }
 }
 
 .server-title h2 {
@@ -82,24 +72,21 @@ h3 {
 
 p {
     color: #969696;
+    text-align: justify;
 }
 
-/* Introduction Section (.introduction) */
 .introduction p {
     color: #939393;
-    text-align: center;
-    margin: 20px 0;
+    text-align: justify;
 }
 
-/* Divider (.divider) */
 .divider {
     height: 1px;
     background-color: #333;
-    margin: 10px 0;
-    margin-bottom: 10px 0;
+    margin: 8px 0;
+    margin-bottom: 8px 0;
 }
 
-/* Rules Section (.rules-section) */
 .rules-section {
     background-color: #1F1F1F;
     padding: 30px;
@@ -110,11 +97,17 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
     .rules-section {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        padding: 30px; /* Increase padding */
-        margin: 20px 0;
+        padding: 30px;
+        margin: 10px 0;
         gap: 10px;
+    }
+    .warning {
+        padding: 20px;
     }
 }
 
@@ -124,57 +117,36 @@ p {
     border-radius: 8px;
     color: #C2C2C2;
     font-size: 1em;
-    margin-bottom: 8px; /* Add bottom padding */
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
-/* Server Sections (.server-section) */
 .server-section {
     margin: 0px 0;
     padding: 15px;
 }
 
-/* Lists (Unordered and Ordered) */
 ul, ol {
     padding-left: 6px;
-    margin-bottom: 0px;
 }
 
 li {
     color: #969696;
 }
 
-.rules-section li {
-    margin: 5px 0;
-}
-
-/* Links (.link) */
 .link {
     color: #A7C0FF;
     text-decoration: none;
 }
 
-/* Specific Rank Sections (.rank-section) */
-.rank-section .price {
-    color: #AFFFAD;
-    font-weight: bold;
-}
-
-/* Warning Box (.warning) */
 .warning { 
-    background-color: #1B1813; 
-    color: #FFE7AD;
+    background-color: #2B2515; 
+    color: #FFEEB0;
     border-radius: 8px;
     padding: 15px; 
     text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-    .warning {
-        padding: 20px; /* Increase padding for warnings */
-    }
-}
-
-/* Download Grid (.download-grid) */
 .download-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -187,10 +159,9 @@ li {
     }
 }
 
-/* Download Item (.download-item) */
 .download-item {
     background-color: #1F1F1F;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -205,7 +176,7 @@ li {
 .download-item img {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .download-item h3 {
@@ -215,11 +186,9 @@ li {
 .download-item p {
     margin: 5px 0;
     color: #BDBDBD;
-    text-align: center; /* Center version text */
+    text-align: center;
 }
 
-
-/* Download Button (.download-btn) and History Button (.history-btn) */
 .download-btn {
     display: block;
     width: 100%;
@@ -228,16 +197,16 @@ li {
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #3D5AFE; /* Updated color */
+    background-color: #3D5AFE;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .download-btn:hover {
-    background-color: #2A43B7; /* Darker shade for hover effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    background-color: #2A43B7;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .history-btn {
@@ -254,79 +223,20 @@ li {
 }
 
 .download-btn a, .history-btn a {
-    color: #fff; /* Keep button text white */
-    text-decoration: none; /* Remove underlines from links */
-}
-
-/* Grouped Button Styles */
-.grouped-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid #ddd; /* Add bottom border to separate buttons */
-    background-color: #2E2E2E;
     color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: none;
+    text-decoration: none;
 }
 
-/* First button in the group */
-.grouped-btn:first-child {
-    border-radius: 8px 8px 0 0; /* Rounded corners on top */
-}
-
-/* Last button in the group */
-.grouped-btn:last-child {
-    border-radius: 0 0 8px 8px; /* Rounded corners on bottom */
-    border-bottom: none; /* Remove bottom border from last button */
-}
-
-/* Only one button in the group */
-.grouped-btn:only-child {
-    border-radius: 8px; /* Fully rounded */
-    border-bottom: none; /* Remove bottom border */
-}
-
-/* Button Hover State */
-.grouped-btn:hover {
-    background-color: #1a1a1a; /* Slightly darker shade for hover */
-}
-
-/* If using links inside buttons */
-.grouped-btn a {
-    color: #fff; /* Keep button text white */
-    text-decoration: none; /* Remove underlines from links */
-}
-
-/* Adjustments for specific buttons */
-.download-btn {
-    background-color: #3D5AFE;
-}
-
-.download-btn:hover {
-    background-color: #2A43B7;
-}
-
-.history-btn {
-    background-color: #2E2E2E;
-}
-
-
-/* Status Link (.status-link) */
 .status-link {
-    color: #FF9788; /* Same color as buttons */
-    text-decoration: none; /* Remove underlines from links */
+    color: #FF9788;
+    text-decoration: none;
 }
 
 .status-link:hover {
-    text-decoration: none; /* Ensure no underline on hover */
+    text-decoration: none;
 }
 
-/* Footer (.footer) */
 .footer {
-    margin-top: 40px;
     color: #929292;
     text-align: center;
 }
@@ -336,21 +246,14 @@ li {
 }
 
 .footer a {
-    color: #3D5AFE;
+    color: #A7C0FF;
     text-decoration: none;
 }
 
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* Inline Styles (e.g., span) */
 span {
-    font-weight: bold; /* Ensure boldness where needed */
-    /* Add specific inline font color or other styles as necessary */
+    font-weight: bold;
 }
 
-/* Additional styling for elements like <code> or other inline elements */
 code {
     background-color: #333;
     color: #DBDBDB;
@@ -359,14 +262,12 @@ code {
     font-family: monospace; 
 }
 
-/* Grid Container (.grid-container) */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
 
-/* Grid Item (.grid-item) */
 .grid-item img {
     width: 100%;
     height: auto;
@@ -381,17 +282,24 @@ code {
     align-items: center;
 }
 
+.grid-item-large h3 {
+    margin-top: 3px;
+    margin-bottom: -8px; /* Adjust this value as needed */
+}
+
+
 .grid-item-large img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    aspect-ratio: 64/35; /* Preserve the original aspect ratio */
+    aspect-ratio: 64/35;
 }
 
-/* Center grid item subtitles */
 .grid-item h3 {
-    text-align: center;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: -4px;
 }
 
 .faq-content {
