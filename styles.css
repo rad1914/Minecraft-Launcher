@@ -10,6 +10,7 @@ body {
 body, .minecraft-text {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-smooth: always; /* Cross-browser font-smoothing */
 }
 
 @font-face {
@@ -17,7 +18,7 @@ body, .minecraft-text {
     src: url('./minecraft-font.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: optional; /* Performance improvement */
 }
 
 .minecraft-text {
@@ -43,7 +44,6 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-    margin: 8px 0;
 }
 
 h3 {
@@ -60,23 +60,35 @@ h3 {
 
 .server-title h1, .server-title h2 {
     text-align: center;
-    margin: 8px 0;
+    margin: 0px 0;
     font-size: 1.7em;
 }
 
 .server-title h2 {
     color: #BBBBBB;
     font-size: 1.2em;
-    margin: -10px 0;
+    margin: 0px 0;
+}
+
+.server-title p {
+    margin-bottom: 10px 0;
 }
 
 p {
-    color: #969696;
+    margin: 0px;
+    color: #969696; /* Reverted color contrast */
     text-align: justify;
 }
 
+.rounded-image {
+  border-radius: 25%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
 .introduction p {
-    color: #939393;
+    color: #939393; /* Reverted color contrast */
     text-align: justify;
 }
 
@@ -84,7 +96,6 @@ p {
     height: 1px;
     background-color: #333;
     margin: 8px 0;
-    margin-bottom: 8px 0;
 }
 
 .rules-section {
@@ -128,10 +139,12 @@ p {
 
 ul, ol {
     padding-left: 6px;
+    margin: 5px 0;
 }
 
 li {
-    color: #969696;
+    color: #969696; /* Reverted color contrast */
+    margin: 0px 0;
 }
 
 .link {
@@ -264,7 +277,7 @@ code {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Reverted grid responsiveness */
     gap: 12px;
 }
 
@@ -283,27 +296,25 @@ code {
 }
 
 .grid-item-large h3 {
-    margin-top: 3px;
-    margin-bottom: -8px; /* Adjust this value as needed */
+    margin: 0px 0;
 }
-
 
 .grid-item-large img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    aspect-ratio: 64/35;
+    aspect-ratio: auto; /* Fallback for flexible images */
 }
 
 .grid-item h3 {
     text-align: left;
     margin-top: 0px;
-    margin-bottom: -4px;
+    margin-bottom: 0px;
 }
 
 .faq-content {
-    color: #939393;
+    color: #939393; /* Reverted color contrast */
     text-align: justify;
     align-items: center;
 }

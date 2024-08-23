@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estado de los Servidores</title>
     <link rel="stylesheet" href="styles.css">
@@ -10,63 +11,69 @@
     <div class="container">
         <div class="server-title">
             <h1>Estado de los servidores</h1>
+            <h2>Solo para Frikis</h2>
+            <p>
+                Aquí puedes encontrar información detallada y actualizada sobre el estado de nuestros productos. ¡Mantente conectado!
+            </p>
         </div>
-        <p class="faq-content">
-            Aquí puedes encontrar información actualizada sobre el estado de nuestros servidores Minecraft. ¡Mantente conectado!
-        </p>
+
         <div class="divider"></div>
 
-        <div id="server-list">
-            <div class="server-info">
-                <h3 class="server-name">Ember Hills</h3>
-                <p id="serverStatusEmberHills" class="server-status minecraft-text">Cargando estado del servidor...</p>
-                <button id="copyButtonEmberHills" class="download-btn" onclick="copyToClipboard('serverIpEmberHills')">Copiar IP</button>
+        <div id="server-section">
+                <p>EmberHills:</p>
+            <div class="rules-heading"; style="background-color: #000;">
+                <p id="serverStatusEmberHills" class="server-status minecraft-text">Fetching server data...</p>
+                <div id="serverInfoEmberHills" class="server-info"></div>
                 <p id="serverIpEmberHills" class="server-ip">20.ip.gl.ply.gg:41633</p>
+                <div id="statusIndicatorEmberHills" class="status-indicator"></div>
             </div>
 
-            <div class="server-info">
-                <h3 class="server-name">Rogue Riot</h3>
-                <p id="serverStatusRogueRiot" class="server-status minecraft-text">Cargando estado del servidor...</p>
-                <button id="copyButtonRogueRiot" class="download-btn" onclick="copyToClipboard('serverIpRogueRiot')">Copiar IP</button>
+                <p>RogueRiot:</p>
+            <div class="rules-heading"; style="background-color: #000;">
+
+                <p id="serverStatusRogueRiot" class="server-status minecraft-text">Fetching server data...</p>
+                <div id="serverInfoRogueRiot" class="server-info"></div>
                 <p id="serverIpRogueRiot" class="server-ip">22.ip.gl.ply.gg:11525</p>
+                <div id="statusIndicatorRogueRiot" class="status-indicator"></div>
             </div>
 
-            <div class="server-info">
-                <h3 class="server-name">Sylvan Canyon</h3>
-                <p id="serverStatusSylvanCanyon" class="server-status minecraft-text">Cargando estado del servidor...</p>
-                <button id="copyButtonSylvanCanyon" class="download-btn" onclick="copyToClipboard('serverIpSylvanCanyon')">Copiar IP</button>
-                <p id="serverIpSylvanCanyon" class="server-ip">20.ip.gl.ply.gg:41633</p>
+                <p>SylvanCanyon:</p>
+            <div class="rules-heading"; style="background-color: #000;">
+
+                <p id="serverStatusSylvanCanyon" class="server-status minecraft-text">Fetching server data...</p>
+                <div id="serverInfoSylvanCanyon" class="server-info"></div>
+                <p id="serverIpSylvanCanyon" class="server-ip">20.ip.gl.ply.gg:46960</p>
+                <div id="statusIndicatorSylvanCanyon" class="status-indicator"></div>
+            </div>
+
+                <p>✦ 𐌊𐌀𐌋𐌙𐌁𐌵ɽ𐌍:</p>
+            <div class="rules-heading"; style="background-color: #000;">
+                <p id="serverStatusWhatsAppBot" class="server-status minecraft-text">Fetching server data...</p>
+                <div id="serverInfoWhatsAppBot" class="server-info"></div>
+                <div id="statusIndicatorWhatsAppBot" class="status-indicator"></div>
             </div>
         </div>
 
-<div class="server-info">
-    <h3 class="server-name">WhatsApp Bot</h3>
-    <p id="serverStatusWhatsAppBot" class="server-status minecraft-text">Cargando estado del servidor...</p>
-    
-</div>
-
-        
         <div class="divider"></div>
 
         <div class="server-section">
             <h3 class="rules-heading">❔ Preguntas Frecuentes</h3>
 
             <ul>
-                <li><strong>¿Qué es esto?</strong> Esta página te muestra el estado actual del servidor Minecraft. Puedes ver si está online, cuántos jugadores hay conectados, la versión del servidor y más.</li>
-                <li><strong>¿Cómo funciona?</strong> Esta página utiliza una API para obtener información sobre el servidor. La API se actualiza constantemente, por lo que la información que ves aquí es siempre la más reciente.</li>
-                <li><strong>¿Qué significa "EULA Blocked"?</strong> Si el servidor tiene "EULA Blocked" en "Sí", significa que el servidor no está configurado correctamente para cumplir con los términos de uso de Mojang. Esto puede significar que el servidor no está autorizado para funcionar o que no está configurado para ser un servidor público.</li>
-                <li><strong>¿Qué significa "Protocol Version"?</strong> La versión del protocolo es la versión del servidor que se utiliza para comunicarse con los clientes. Si la versión del protocolo es demasiado baja, es posible que no puedas conectarte al servidor.</li>
-                <li><strong>¿Cómo puedo reportar un problema?</strong> Si encuentras algún problema con el servidor, puedes reportarlo en el chat del juego o contactando con un administrador.</li>
-                <li><strong>¿Qué pasa si el servidor está offline?</strong> Si el servidor está offline, puede ser que esté en mantenimiento o que haya un problema técnico. Puedes intentar conectarte más tarde o consultar el foro del servidor para obtener más información.</li>
+                <li><span>¿Qué es esto?</span> Esta página te muestra el estado actual del servidor Minecraft. Puedes ver si está online, cuántos jugadores hay conectados, la versión del servidor y más.</li>
+                <li><span>¿Cómo funciona?</span> Esta página utiliza una API para obtener información sobre el servidor. La API se actualiza constantemente, por lo que la información que ves aquí es siempre la más reciente.</li>
+                <li><span>¿Qué significa "EULA Blocked"?</span> Si el servidor tiene "EULA Blocked" en "Sí", significa que el servidor no está configurado correctamente para cumplir con los términos de uso de Mojang. Esto puede significar que el servidor no está autorizado para funcionar o que no está configurado para ser un servidor público.</li>
+                <li><span>¿Qué significa "Protocol Version"?</span> La versión del protocolo es la versión del servidor que se utiliza para comunicarse con los clientes. Si la versión del protocolo es demasiado baja, es posible que no puedas conectarte al servidor.</li>
+                <li><span>¿Cómo puedo reportar un problema?</span> Si encuentras algún problema con el servidor, puedes reportarlo en el chat del juego o contactando con un administrador.</li>
+                <li><span>¿Qué pasa si el servidor está offline?</span> Si el servidor está offline, puede ser que esté en mantenimiento o que haya un problema técnico. Puedes intentar conectarte más tarde o consultar el foro del servidor para obtener más información.</li>
             </ul>
         </div>
-                    <div class="divider"></div>
 
-            <p style="text-align: center;"><a href="wiki.html" class="link">Volver a la Wiki</a></p>
-        
-        </div>
+        <div class="divider"></div>
+
+        <p class="footer"><a href="wiki.html" class="link">Volver a la Wiki</a></p>
     </div>
 
-    <script src="status.js"></script>
+    <script src="detailedStatus.js"></script>
 </body>
 </html>
