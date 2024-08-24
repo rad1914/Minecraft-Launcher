@@ -42,7 +42,7 @@ async function updateDetailedServerStatus(server) {
                     Players: ${data.players.online}/${data.players.max}<br>
                     MOTD: ${decodeMOTD(data.motd.clean.join(' '))}<br>
                     Hostname: ${data.hostname}<br>
-                    Software: ${data.software}<br>
+                    Software: NodeJs<br>
                 `;
             }
         } else {
