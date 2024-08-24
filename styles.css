@@ -263,6 +263,8 @@ code {
 }
 
 .grid-item-large h3 {
+    font-size: 14px;
+    text-align: center;    
     margin: 0;
 }
 
@@ -273,8 +275,8 @@ code {
 }
 
 .grid-item h3 {
-    font-size: 17px;
-    text-align: left;
+    font-size: 14px;
+    text-align: center;
     margin: 0;
 }
 
