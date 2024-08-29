@@ -11,15 +11,12 @@
     --divider-color: #333;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    text-align: justify;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'Sans';
+    src: url('./sans.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -30,8 +27,19 @@ body {
     font-display: swap;
 }
 
+body {
+    font-family: 'Sans', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .minecraft-text {
-    font-family: 'Minecraft', Arial, sans-serif;
+    font-family: 'Minecraft', 'Sans', Arial, sans-serif;
 }
 
 a, .link, .status-link {
@@ -140,7 +148,7 @@ p {
     border-radius: 8px;
     color: #C2C2C2;
     font-size: 1em;
-    margin: 4px 0;
+    margin: 2px 0;
 }
 
 ul, ol {
@@ -179,7 +187,7 @@ li {
 .download-item img {
     width: 80px;
     height: 80px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .download-item h3 {
@@ -252,7 +260,7 @@ code {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .grid-item-large {
@@ -272,6 +280,7 @@ code {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    border-radius: 20px;
 }
 
 .grid-item h3 {

@@ -1,6 +1,6 @@
 const servers = [
     { name: 'EmberHills', ip: '20.ip.gl.ply.gg', port: 41633, statusId: 'serverStatusEmberHills', serverIpId: 'serverIpEmberHills', statusButtonId: 'copyButtonEmberHills' },
-    { name: 'RogueRiot', ip: '22.ip.gl.ply.gg', port: 11525, statusId: 'serverStatusRogueRiot', serverIpId: 'serverIpRogueRiot', statusButtonId: 'copyButtonRogueRiot' },
+    { name: 'RogueRiot', ip: '22.ip.gl.ply.gg', port: 20927, statusId: 'serverStatusRogueRiot', serverIpId: 'serverIpRogueRiot', statusButtonId: 'copyButtonRogueRiot' },
     { name: 'SylvanCanyon', ip: '20.ip.gl.ply.gg', port: 41633, statusId: 'serverStatusSylvanCanyon', serverIpId: 'serverIpSylvanCanyon', statusButtonId: 'copyButtonSylvanCanyon' },
     { name: '𐌊𐌀𐌋𐌙𐌁𐌵ɽ𐌍 Bot', ip: '20.ip.gl.ply.gg', port: 41633, statusId: 'serverStatusWhatsAppBot', serverIpId: 'serverIpWhatsAppBot' }
 ];
